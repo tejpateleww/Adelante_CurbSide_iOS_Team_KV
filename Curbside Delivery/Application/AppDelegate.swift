@@ -1,0 +1,136 @@
+//
+//  AppDelegate.swift
+//  Curbside Delivery
+//
+//  Created by Tej P on 01/11/21.
+//
+
+import UIKit
+import IQKeyboardManagerSwift
+import Alamofire
+
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    //MARK: - Properties
+    static var current: AppDelegate {
+        UIApplication.shared.delegate as! AppDelegate
+    }
+    
+    var window:UIWindow?
+    var offlineStatue : Bool = false
+    var locationService = LocationService()
+
+    //MARK: - Life cycle methods
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        //print(UIFont.fontNames(forFamilyName: "Nexa"))
+        self.checkConnction()
+        self.setupKeyboardManager()
+        return true
+    }
+    
+    //MARK: - Custom methods
+    private func setupKeyboardManager(){
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        IQKeyboardManager.shared.previousNextDisplayMode = .default
+        IQKeyboardManager.shared.shouldShowToolbarPlaceholder = true
+        //IQKeyboardManager.shared.disabledToolbarClasses = [ChatRoomVC.self]
+    }
+    
+    
+    func navigateToLogin() {
+       let controller = AppStoryboard.Auth.instance.instantiateViewController(withIdentifier: LoginViewController.storyboardID) as? LoginViewController
+       let nav = UINavigationController(rootViewController: controller!)
+        nav.navigationBar.isHidden = true
+       self.window?.rootViewController = nav
+    }
+    
+    func navigateToHome() {
+        let controller = AppStoryboard.Main.instance.instantiateViewController(withIdentifier: CustomTabBarVC.storyboardID) as! CustomTabBarVC
+        let nav = UINavigationController(rootViewController: controller)
+        nav.navigationBar.isHidden = true
+        self.window?.rootViewController = nav
+    }
+    
+    func clearData(){
+        // Reset UserDefaults
+        let defaults = UserDefaults.standard
+        let dictionary = defaults.dictionaryRepresentation()
+        dictionary.keys.forEach { key in
+            defaults.removeObject(forKey: key)
+        }
+        userDefault.set(false, forKey: UserDefaultsKey.isUserLogin.rawValue)
+        SingletonClass.sharedInstance.clearSingletonClass()
+        AppDelegate.current.navigateToLogin()
+    }
+    
+    //MARK: - Network methods
+    func checkConnction() {
+        let manager = Alamofire.NetworkReachabilityManager()
+        manager?.startListening { status in
+            switch status {
+            case .notReachable :
+                print("not reachable")
+                self.offlineStatue = true
+//                let banner = StatusBarNotificationBanner(title: "connection lost", style: .danger)
+//                banner.show()
+                AppDelegate.current.showOfflineVC()
+            case .reachable(.cellular) :
+                print("cellular")
+                if(self.offlineStatue){
+                    self.offlineStatue = false
+//                    let banner = StatusBarNotificationBanner(title: "back online", style: .success)
+//                    banner.show()
+                    AppDelegate.current.hideOfflineVC()
+                }
+            case .reachable(.ethernetOrWiFi) :
+                print("ethernetOrWiFi")
+                if(self.offlineStatue){
+                    self.offlineStatue = false
+//                    let banner = StatusBarNotificationBanner(title: "back online", style: .success)
+//                    banner.show()
+                    AppDelegate.current.hideOfflineVC()
+                }
+            default :
+                print("unknown")
+            }
+        }
+    }
+    
+    func showOfflineVC(){
+       let topVC = UIApplication.appTopViewController()
+        if (topVC?.isKind(of: OfflineVC.self) ?? false){
+            return
+        }else{
+            let OfflineVC = AppStoryboard.Main.instance.instantiateViewController(withIdentifier: OfflineVC.storyboardID) as! OfflineVC
+            OfflineVC.modalPresentationStyle = .fullScreen
+            topVC?.present(OfflineVC, animated: true, completion: nil)
+        }
+        
+        
+    }
+    
+    func hideOfflineVC(){
+        UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: true, completion: nil)
+    }
+
+}
+
+extension UIApplication {
+    class func appTopViewController(controller: UIViewController? = UIApplication.shared.keyWindow?.rootViewController) -> UIViewController? {
+        if let navigationController = controller as? UINavigationController {
+            return appTopViewController(controller: navigationController.visibleViewController)
+        }
+        if let tabController = controller as? UITabBarController {
+            if let selected = tabController.selectedViewController {
+                return appTopViewController(controller: selected)
+            }
+        }
+        if let presented = controller?.presentedViewController {
+            return appTopViewController(controller: presented)
+        }
+        return controller
+    }
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSFileProviderDomainUsageDescription</key>
+	<string></string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>App Would like to Access Your  Photo Library to Take Photos</string>
+	<key>NSCameraUsageDescription</key>
+	<string>App Would like to Access Your  Camera to Take Photos</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>NexaThinItalic.otf</string>
+		<string>NexaThin.otf</string>
+		<string>NexaLightItalic.otf</string>
+		<string>NexaLight.otf</string>
+		<string>NexaBookItalic.otf</string>
+		<string>NexaBook.otf</string>
+		<string>NexaBoldItalic.otf</string>
+		<string>NexaBold.otf</string>
+		<string>NexaBlackItalic.otf</string>
+		<string>NexaBlack.otf</string>
+		<string>NexaLight.otf</string>
+		<string>NexaBold.otf</string>
+		<string>NexaRegular.otf</string>
+	</array>
+</dict>
+</plist>

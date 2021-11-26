@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="86" id="KGk-i7-Jjw" customClass="NotificationCell" customModule="Curbside_Delivery" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="669" height="86"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="669" height="86"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8TW-0A-IDb">
+                        <rect key="frame" x="10" y="5" width="649" height="80"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eMR-fg-2YL">
+                                <rect key="frame" x="10" y="10" width="50" height="50"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconNotiSuccess" translatesAutoresizingMaskIntoConstraints="NO" id="zns-96-RET">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" name="HomeCellBG"/>
+                                <constraints>
+                                    <constraint firstItem="zns-96-RET" firstAttribute="top" secondItem="eMR-fg-2YL" secondAttribute="top" id="4lt-9N-dBN"/>
+                                    <constraint firstAttribute="trailing" secondItem="zns-96-RET" secondAttribute="trailing" id="Af9-rj-oR6"/>
+                                    <constraint firstAttribute="bottom" secondItem="zns-96-RET" secondAttribute="bottom" id="Dcp-yg-0q2"/>
+                                    <constraint firstAttribute="width" secondItem="eMR-fg-2YL" secondAttribute="height" id="l56-Tc-WzY"/>
+                                    <constraint firstItem="zns-96-RET" firstAttribute="leading" secondItem="eMR-fg-2YL" secondAttribute="leading" id="myq-KZ-qpR"/>
+                                    <constraint firstAttribute="height" constant="50" id="vx9-PW-LKZ"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order delivered" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k42-Fl-CkM">
+                                <rect key="frame" x="70" y="10" width="569" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Order #1234 has been suc..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXH-rI-Zxf">
+                                <rect key="frame" x="70" y="39" width="569" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="k42-Fl-CkM" secondAttribute="trailing" constant="10" id="2nJ-zs-dTp"/>
+                            <constraint firstItem="sXH-rI-Zxf" firstAttribute="trailing" secondItem="k42-Fl-CkM" secondAttribute="trailing" id="8C5-un-8vr"/>
+                            <constraint firstItem="eMR-fg-2YL" firstAttribute="top" secondItem="8TW-0A-IDb" secondAttribute="top" constant="10" id="8YG-ev-N1O"/>
+                            <constraint firstItem="sXH-rI-Zxf" firstAttribute="top" secondItem="k42-Fl-CkM" secondAttribute="bottom" constant="8" id="Bfb-g6-4RH"/>
+                            <constraint firstItem="sXH-rI-Zxf" firstAttribute="leading" secondItem="k42-Fl-CkM" secondAttribute="leading" id="ThH-55-zMf"/>
+                            <constraint firstItem="k42-Fl-CkM" firstAttribute="leading" secondItem="eMR-fg-2YL" secondAttribute="trailing" constant="10" id="crB-EI-VVm"/>
+                            <constraint firstItem="eMR-fg-2YL" firstAttribute="leading" secondItem="8TW-0A-IDb" secondAttribute="leading" constant="10" id="fuy-rF-l5S"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eMR-fg-2YL" secondAttribute="bottom" constant="15" id="l2W-Bx-UEL"/>
+                            <constraint firstItem="k42-Fl-CkM" firstAttribute="top" secondItem="eMR-fg-2YL" secondAttribute="top" id="o33-7j-w9F"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sXH-rI-Zxf" secondAttribute="bottom" constant="15" id="wPo-VW-tpp"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AwI-hq-yOr">
+                        <rect key="frame" x="0.0" y="85" width="669" height="1"/>
+                        <color key="backgroundColor" name="HomeCellBG"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Ya2-OA-LBP"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="AwI-hq-yOr" firstAttribute="top" secondItem="8TW-0A-IDb" secondAttribute="bottom" id="5i9-na-Hf3"/>
+                    <constraint firstItem="8TW-0A-IDb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="IUg-tY-nPZ"/>
+                    <constraint firstAttribute="trailing" secondItem="AwI-hq-yOr" secondAttribute="trailing" id="VFd-fW-VS5"/>
+                    <constraint firstAttribute="bottom" secondItem="AwI-hq-yOr" secondAttribute="bottom" id="YWI-t4-DM2"/>
+                    <constraint firstItem="AwI-hq-yOr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dAz-mq-CMy"/>
+                    <constraint firstItem="8TW-0A-IDb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="gTr-Pe-I9X"/>
+                    <constraint firstAttribute="trailing" secondItem="8TW-0A-IDb" secondAttribute="trailing" constant="10" id="hO1-Hx-cXW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imgNoti" destination="zns-96-RET" id="cc6-Zv-8Ot"/>
+                <outlet property="lblNotiDesc" destination="sXH-rI-Zxf" id="eS3-yy-eic"/>
+                <outlet property="lblNotiTitle" destination="k42-Fl-CkM" id="yVH-q0-Efz"/>
+                <outlet property="vWImage" destination="eMR-fg-2YL" id="gbw-DR-ivs"/>
+                <outlet property="vwContainer" destination="8TW-0A-IDb" id="pxp-iQ-b8A"/>
+            </connections>
+            <point key="canvasLocation" x="381.8840579710145" y="141.96428571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="iconNotiSuccess" width="50" height="50"/>
+        <namedColor name="HomeCellBG">
+            <color red="0.93699997663497925" green="0.94499999284744263" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
