@@ -22,25 +22,25 @@
                         <rect key="frame" x="5" y="5" width="695" height="193"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chicken Burger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqI-an-1Et">
-                                <rect key="frame" x="15" y="0.0" width="347.5" height="20.5"/>
+                                <rect key="frame" x="15" y="0.0" width="354" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YnD-Wa-xBh">
-                                <rect key="frame" x="372.5" y="0.0" width="139" height="20.5"/>
+                                <rect key="frame" x="379" y="0.0" width="142" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$60" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIp-nS-0AN">
-                                <rect key="frame" x="529" y="0.0" width="139" height="20.5"/>
+                                <rect key="frame" x="538.5" y="0.0" width="141.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chicken Burger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Evw-RX-jad">
-                                <rect key="frame" x="15" y="25.5" width="347.5" height="162.5"/>
+                                <rect key="frame" x="15" y="25.5" width="354" height="162.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -48,7 +48,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="YnD-Wa-xBh" firstAttribute="width" secondItem="AIp-nS-0AN" secondAttribute="width" id="0Jm-lO-9AR"/>
+                            <constraint firstAttribute="trailing" secondItem="AIp-nS-0AN" secondAttribute="trailing" constant="15" id="3n1-dN-eZY"/>
                             <constraint firstItem="EqI-an-1Et" firstAttribute="top" secondItem="YnD-Wa-xBh" secondAttribute="top" id="5z0-Zz-ADH"/>
                             <constraint firstItem="Evw-RX-jad" firstAttribute="leading" secondItem="EqI-an-1Et" secondAttribute="leading" id="DQb-vH-8Em"/>
                             <constraint firstItem="Evw-RX-jad" firstAttribute="top" secondItem="EqI-an-1Et" secondAttribute="bottom" constant="5" id="Dj2-15-QY2"/>
@@ -58,9 +58,9 @@
                             <constraint firstItem="EqI-an-1Et" firstAttribute="top" secondItem="3Km-dF-SHi" secondAttribute="top" id="Uf4-M6-ryx"/>
                             <constraint firstItem="YnD-Wa-xBh" firstAttribute="leading" secondItem="EqI-an-1Et" secondAttribute="trailing" constant="10" id="VKL-dl-zqO"/>
                             <constraint firstItem="AIp-nS-0AN" firstAttribute="leading" secondItem="YnD-Wa-xBh" secondAttribute="trailing" constant="17.5" id="eKv-fW-JNf"/>
-                            <constraint firstItem="EqI-an-1Et" firstAttribute="width" secondItem="3Km-dF-SHi" secondAttribute="width" multiplier="0.5" id="ecW-iP-4bf"/>
                             <constraint firstItem="YnD-Wa-xBh" firstAttribute="bottom" secondItem="AIp-nS-0AN" secondAttribute="bottom" id="fG2-F1-TbU"/>
                             <constraint firstAttribute="bottom" secondItem="Evw-RX-jad" secondAttribute="bottom" constant="5" id="nDo-mc-CuV"/>
+                            <constraint firstItem="YnD-Wa-xBh" firstAttribute="width" secondItem="AIp-nS-0AN" secondAttribute="width" id="onR-5n-ugC"/>
                             <constraint firstItem="YnD-Wa-xBh" firstAttribute="top" secondItem="AIp-nS-0AN" secondAttribute="top" id="rW3-fK-Hyi"/>
                             <constraint firstItem="EqI-an-1Et" firstAttribute="width" secondItem="YnD-Wa-xBh" secondAttribute="width" multiplier="2.5" id="w1W-sj-iT1"/>
                         </constraints>

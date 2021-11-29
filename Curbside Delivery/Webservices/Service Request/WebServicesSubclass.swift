@@ -64,4 +64,10 @@ class WebServiceSubClass{
         }
     }
     
+    class func deleteNotificationApi(NotificationId:String, completion: @escaping (Bool,String,CommonResModel?,Any) -> ()) {
+        URLSessionRequestManager.makeGetRequest(urlString: ApiKey.removeNotifiaction.rawValue + NotificationId, responseModel: CommonResModel.self) { (status, message, response, error) in
+            completion(status, message, response, error)
+        }
+    }
+    
 }

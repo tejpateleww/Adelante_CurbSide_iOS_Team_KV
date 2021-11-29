@@ -33,11 +33,17 @@
 		885E9DB72742392F008D6C85 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885E9DB62742392F008D6C85 /* Utilities.swift */; };
 		885E9DBB27423B10008D6C85 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885E9DBA27423B10008D6C85 /* UIButton+Extension.swift */; };
 		885E9DBF27423CD6008D6C85 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885E9DBE27423CD6008D6C85 /* UIView+Extension.swift */; };
+		886445C02754D7920004D9E3 /* HomeShimmerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886445BE2754D7920004D9E3 /* HomeShimmerCell.swift */; };
+		886445C12754D7920004D9E3 /* HomeShimmerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886445BF2754D7920004D9E3 /* HomeShimmerCell.xib */; };
+		886445C52754D9CE0004D9E3 /* NoDataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886445C32754D9CE0004D9E3 /* NoDataTableViewCell.swift */; };
+		886445C62754D9CE0004D9E3 /* NoDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886445C42754D9CE0004D9E3 /* NoDataTableViewCell.xib */; };
+		886445CC2754E34E0004D9E3 /* NotiShimmerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886445CA2754E34E0004D9E3 /* NotiShimmerCell.swift */; };
+		886445CD2754E34E0004D9E3 /* NotiShimmerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 886445CB2754E34E0004D9E3 /* NotiShimmerCell.xib */; };
+		886445CF2754ECB80004D9E3 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 886445CE2754ECB80004D9E3 /* loading.json */; };
 		886ED1B8274F728300971F75 /* CommonResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886ED1B7274F728300971F75 /* CommonResModel.swift */; };
 		886ED1BB274F732100971F75 /* ForgotPAsswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886ED1BA274F732100971F75 /* ForgotPAsswordViewModel.swift */; };
 		88708DEA274CA96C00C9D6C1 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88708DE9274CA96C00C9D6C1 /* LoginViewModel.swift */; };
 		88708DEC274CA9B000C9D6C1 /* LoginReqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88708DEB274CA9B000C9D6C1 /* LoginReqModel.swift */; };
-		88708DEF274CB40700C9D6C1 /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 88708DEE274CB40700C9D6C1 /* loading.json */; };
 		88708DF7274CCC1A00C9D6C1 /* OrderListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88708DF5274CCC1900C9D6C1 /* OrderListModel.swift */; };
 		88708DF8274CCC1A00C9D6C1 /* OrderListDatum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88708DF6274CCC1900C9D6C1 /* OrderListDatum.swift */; };
 		88708DFA274CCC6900C9D6C1 /* OrderListReqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88708DF9274CCC6900C9D6C1 /* OrderListReqModel.swift */; };
@@ -166,11 +172,17 @@
 		885E9DB62742392F008D6C85 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		885E9DBA27423B10008D6C85 /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		885E9DBE27423CD6008D6C85 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		886445BE2754D7920004D9E3 /* HomeShimmerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeShimmerCell.swift; sourceTree = "<group>"; };
+		886445BF2754D7920004D9E3 /* HomeShimmerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeShimmerCell.xib; sourceTree = "<group>"; };
+		886445C32754D9CE0004D9E3 /* NoDataTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoDataTableViewCell.swift; sourceTree = "<group>"; };
+		886445C42754D9CE0004D9E3 /* NoDataTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoDataTableViewCell.xib; sourceTree = "<group>"; };
+		886445CA2754E34E0004D9E3 /* NotiShimmerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotiShimmerCell.swift; sourceTree = "<group>"; };
+		886445CB2754E34E0004D9E3 /* NotiShimmerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotiShimmerCell.xib; sourceTree = "<group>"; };
+		886445CE2754ECB80004D9E3 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		886ED1B7274F728300971F75 /* CommonResModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonResModel.swift; sourceTree = "<group>"; };
 		886ED1BA274F732100971F75 /* ForgotPAsswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPAsswordViewModel.swift; sourceTree = "<group>"; };
 		88708DE9274CA96C00C9D6C1 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		88708DEB274CA9B000C9D6C1 /* LoginReqModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginReqModel.swift; sourceTree = "<group>"; };
-		88708DEE274CB40700C9D6C1 /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
 		88708DF5274CCC1900C9D6C1 /* OrderListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListModel.swift; sourceTree = "<group>"; };
 		88708DF6274CCC1900C9D6C1 /* OrderListDatum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderListDatum.swift; sourceTree = "<group>"; };
 		88708DF9274CCC6900C9D6C1 /* OrderListReqModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListReqModel.swift; sourceTree = "<group>"; };
@@ -321,6 +333,8 @@
 		883484B62744F55D00A6A499 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				886445C22754D9CE0004D9E3 /* No Data Found Cell */,
+				886445BD2754D7680004D9E3 /* Shimmer Cell */,
 				88E0691D2746381200E4B8C6 /* Toast.swift */,
 				88F2658C274BC7AF00077772 /* LocationService.swift */,
 				883484B72744F56E00A6A499 /* QRScannerView.swift */,
@@ -357,6 +371,42 @@
 				885E9DB4274238CE008D6C85 /* Validators.swift */,
 			);
 			path = Validation;
+			sourceTree = "<group>";
+		};
+		886445BD2754D7680004D9E3 /* Shimmer Cell */ = {
+			isa = PBXGroup;
+			children = (
+				886445C82754E3320004D9E3 /* Noti Shimmer */,
+				886445C72754E3260004D9E3 /* Home Shimmer */,
+			);
+			path = "Shimmer Cell";
+			sourceTree = "<group>";
+		};
+		886445C22754D9CE0004D9E3 /* No Data Found Cell */ = {
+			isa = PBXGroup;
+			children = (
+				886445C32754D9CE0004D9E3 /* NoDataTableViewCell.swift */,
+				886445C42754D9CE0004D9E3 /* NoDataTableViewCell.xib */,
+			);
+			path = "No Data Found Cell";
+			sourceTree = "<group>";
+		};
+		886445C72754E3260004D9E3 /* Home Shimmer */ = {
+			isa = PBXGroup;
+			children = (
+				886445BE2754D7920004D9E3 /* HomeShimmerCell.swift */,
+				886445BF2754D7920004D9E3 /* HomeShimmerCell.xib */,
+			);
+			path = "Home Shimmer";
+			sourceTree = "<group>";
+		};
+		886445C82754E3320004D9E3 /* Noti Shimmer */ = {
+			isa = PBXGroup;
+			children = (
+				886445CA2754E34E0004D9E3 /* NotiShimmerCell.swift */,
+				886445CB2754E34E0004D9E3 /* NotiShimmerCell.xib */,
+			);
+			path = "Noti Shimmer";
 			sourceTree = "<group>";
 		};
 		886ED1B6274F727800971F75 /* Common */ = {
@@ -399,7 +449,7 @@
 		88708DED274CB40700C9D6C1 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
-				88708DEE274CB40700C9D6C1 /* loading.json */,
+				886445CE2754ECB80004D9E3 /* loading.json */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";
@@ -998,10 +1048,11 @@
 			files = (
 				88E058612743BE68006DBC5A /* NotificationCell.xib in Resources */,
 				887B6C99272FB57F00CBAEEF /* Auth.storyboard in Resources */,
-				88708DEF274CB40700C9D6C1 /* loading.json in Resources */,
+				886445C12754D7920004D9E3 /* HomeShimmerCell.xib in Resources */,
 				88F9DC8F2742801100735D57 /* pendingOrderCell.xib in Resources */,
 				88BA98FA27300F2D00DB38C1 /* NexaBlack.otf in Resources */,
 				88F9DC952742803C00735D57 /* completeOrderCell.xib in Resources */,
+				886445CD2754E34E0004D9E3 /* NotiShimmerCell.xib in Resources */,
 				88BA98FD27300F2D00DB38C1 /* NexaXBold.otf in Resources */,
 				88E058692743E74C006DBC5A /* OrderItemCell.xib in Resources */,
 				887B6C17272FA97C00CBAEEF /* LaunchScreen.storyboard in Resources */,
@@ -1015,11 +1066,13 @@
 				88BA990027300F2D00DB38C1 /* NexaBlackItalic.otf in Resources */,
 				88BA98F727300F2D00DB38C1 /* NexaHeavyItalic.otf in Resources */,
 				88BA990127300F2D00DB38C1 /* NexaThinItalic.otf in Resources */,
+				886445C62754D9CE0004D9E3 /* NoDataTableViewCell.xib in Resources */,
 				88BA98FB27300F2D00DB38C1 /* NexaLight.otf in Resources */,
 				88BA98F527300F2D00DB38C1 /* NexaRegular.otf in Resources */,
 				88BA990427300F2D00DB38C1 /* NexaHeavy.otf in Resources */,
 				88BA98FE27300F2D00DB38C1 /* NexaThin.otf in Resources */,
 				887B6C12272FA97A00CBAEEF /* Main.storyboard in Resources */,
+				886445CF2754ECB80004D9E3 /* loading.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1157,6 +1210,7 @@
 				885E9D5327423491008D6C85 /* CustomSlider.swift in Sources */,
 				885E9D5A27423491008D6C85 /* CustomLabel.swift in Sources */,
 				88F2658D274BC7AF00077772 /* LocationService.swift in Sources */,
+				886445CC2754E34E0004D9E3 /* NotiShimmerCell.swift in Sources */,
 				887B6CCF272FBC6000CBAEEF /* UIColor+Extension.swift in Sources */,
 				88708DF7274CCC1A00C9D6C1 /* OrderListModel.swift in Sources */,
 				885E9DB5274238CE008D6C85 /* Validators.swift in Sources */,
@@ -1200,6 +1254,7 @@
 				88F9DC87274269AE00735D57 /* ProfileVC.swift in Sources */,
 				883484BD2745298C00A6A499 /* DeliverSuccessPopUpVC.swift in Sources */,
 				887B6CD6272FBC6000CBAEEF /* UITextField+Extension.swift in Sources */,
+				886445C02754D7920004D9E3 /* HomeShimmerCell.swift in Sources */,
 				885E9DA527423531008D6C85 /* Colors.swift in Sources */,
 				887B6CD2272FBC6000CBAEEF /* DateFormate+Extension.swift in Sources */,
 				881D7C5A274E151700B7A91D /* NotificationReqModel.swift in Sources */,
@@ -1212,6 +1267,7 @@
 				887B6CCD272FBC6000CBAEEF /* UIApplication+Extension.swift in Sources */,
 				88F2658B274BC5BA00077772 /* LoginResponseModel.swift in Sources */,
 				886ED1BB274F732100971F75 /* ForgotPAsswordViewModel.swift in Sources */,
+				886445C52754D9CE0004D9E3 /* NoDataTableViewCell.swift in Sources */,
 				88708DEA274CA96C00C9D6C1 /* LoginViewModel.swift in Sources */,
 				88E0692D2746450B00E4B8C6 /* WebServicesSubclass.swift in Sources */,
 				88E058602743BE68006DBC5A /* NotificationCell.swift in Sources */,

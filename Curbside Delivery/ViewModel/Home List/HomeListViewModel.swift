@@ -11,9 +11,12 @@ class HomeListViewModel{
     weak var homeVC : HomeVC? = nil
     
     func webserviceLogin(reqModel: OrderListReqModel){
-        Utilities.showHud()
         WebServiceSubClass.OrderListApi(reqModel: reqModel) { (status, apiMessage, response, error) in
-            Utilities.hideHud()
+            DispatchQueue.main.async {
+                self.homeVC?.refreshControl.endRefreshing()
+            }
+            self.homeVC?.isTblReload = true
+            self.homeVC?.isLoading = false
             if status{
                 self.homeVC?.arrorders = response?.data ?? []
                 self.homeVC?.tblOrders.reloadData()
@@ -27,6 +30,11 @@ class HomeListViewModel{
         Utilities.showHud()
         WebServiceSubClass.OrderDetailApi(reqModel: reqModel) { (status, apiMessage, response, error) in
             Utilities.hideHud()
+            DispatchQueue.main.async {
+                self.homeVC?.refreshControl.endRefreshing()
+            }
+            self.homeVC?.isTblReload = true
+            self.homeVC?.isLoading = false
             if status{
                 self.homeVC?.goToOrderDetail(orderDict: response?.data)
             }else{

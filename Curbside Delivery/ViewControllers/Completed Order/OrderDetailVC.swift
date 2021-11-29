@@ -42,6 +42,8 @@ class OrderDetailVC: BaseViewController {
     @IBOutlet weak var btnDeliver: submitButton!
     @IBOutlet weak var stackDeliver: UIStackView!
     @IBOutlet weak var stackDeliverHeight: NSLayoutConstraint!
+    @IBOutlet weak var scrollVw: UIScrollView!
+    
     
     var customTabBarController: CustomTabBarVC?
     var isFromScanCode : Bool = false
@@ -84,6 +86,8 @@ class OrderDetailVC: BaseViewController {
     func setupUI(){
         
         self.addNavBarImage(isLeft: true, isRight: true)
+        self.scrollVw.showsVerticalScrollIndicator = false
+        self.scrollVw.showsHorizontalScrollIndicator = false
         
         if(isFromScanCode){
             self.setNavigationBarInViewController(controller: self, naviColor: colors.appOrangeColor.value, naviTitle: NavTitles.OrderDetails.value, leftImage: NavItemsLeft.back.value, rightImages: [NavItemsRight.none.value], isTranslucent: true, isShowHomeTopBar: false)
@@ -126,12 +130,12 @@ class OrderDetailVC: BaseViewController {
         self.lblTitleQtyItem.font = FontBook.bold.font(ofSize: 18)
         self.lblTitlePriceItem.font = FontBook.bold.font(ofSize: 18)
         self.lblTitleYourOrder.font = FontBook.bold.font(ofSize: 22)
-        self.lblTitleSubTotal.font = FontBook.regular.font(ofSize: 18)
-        self.lblTitleServiceFee.font = FontBook.regular.font(ofSize: 18)
-        self.lblTitleTax.font = FontBook.regular.font(ofSize: 18)
-        self.lblSubTotal.font = FontBook.bold.font(ofSize: 18)
-        self.lblServiceFee.font = FontBook.bold.font(ofSize: 18)
-        self.lblTax.font = FontBook.bold.font(ofSize: 18)
+        self.lblTitleSubTotal.font = FontBook.regular.font(ofSize: 16)
+        self.lblTitleServiceFee.font = FontBook.regular.font(ofSize: 16)
+        self.lblTitleTax.font = FontBook.regular.font(ofSize: 16)
+        self.lblSubTotal.font = FontBook.bold.font(ofSize: 16)
+        self.lblServiceFee.font = FontBook.bold.font(ofSize: 16)
+        self.lblTax.font = FontBook.bold.font(ofSize: 16)
         
         
         self.tblItems.delegate = self

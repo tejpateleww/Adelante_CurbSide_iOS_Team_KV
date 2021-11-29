@@ -29,7 +29,7 @@ class OrderItemCell: UITableViewCell {
         self.lblItemName.font = FontBook.bold.font(ofSize: 14)
         self.lblItemQty.font = FontBook.bold.font(ofSize: 14)
         self.lblItemPrice.font = FontBook.bold.font(ofSize: 14)
-        self.lblDate.font = FontBook.regular.font(ofSize: 14)
+        self.lblDate.font = FontBook.regular.font(ofSize: 12)
     }
     
 }

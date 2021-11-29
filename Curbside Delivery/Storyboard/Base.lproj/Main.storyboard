@@ -733,19 +733,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r42-bc-5qR">
-                                                <rect key="frame" x="20" y="298.5" width="207" height="20.5"/>
+                                                <rect key="frame" x="20" y="298.5" width="196.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qty" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPl-C7-46N">
-                                                <rect key="frame" x="235" y="298.5" width="83" height="20.5"/>
+                                                <rect key="frame" x="224.5" y="298.5" width="79" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n92-Po-Qqc">
-                                                <rect key="frame" x="326" y="298.5" width="82.5" height="20.5"/>
+                                                <rect key="frame" x="311.5" y="298.5" width="78.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -865,6 +865,9 @@
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isCornerRadius" value="YES"/>
                                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isBold" value="YES"/>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="btnDeliverAction:" destination="hmO-co-rfJ" eventType="touchUpInside" id="2Kg-97-IoF"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -909,7 +912,7 @@
                                             <constraint firstItem="RYW-mJ-I0Z" firstAttribute="trailing" secondItem="fJA-vh-yZa" secondAttribute="trailing" id="Egd-Jm-ywF"/>
                                             <constraint firstItem="9bE-dr-yov" firstAttribute="trailing" secondItem="pO8-6o-Sze" secondAttribute="trailing" id="HgQ-yS-jL3"/>
                                             <constraint firstItem="YD7-Yz-PH3" firstAttribute="leading" secondItem="o7e-R6-5Uz" secondAttribute="leading" id="IwD-L5-MCX"/>
-                                            <constraint firstItem="r42-bc-5qR" firstAttribute="width" secondItem="qeh-LP-eNc" secondAttribute="width" multiplier="0.5" id="JeA-bD-Kve"/>
+                                            <constraint firstItem="r42-bc-5qR" firstAttribute="width" secondItem="qeh-LP-eNc" secondAttribute="width" multiplier="0.475" id="JeA-bD-Kve"/>
                                             <constraint firstItem="9bA-tL-tsj" firstAttribute="leading" secondItem="qeh-LP-eNc" secondAttribute="leading" constant="20" id="JiY-Pf-Y1i"/>
                                             <constraint firstItem="9bA-tL-tsj" firstAttribute="width" secondItem="fJA-vh-yZa" secondAttribute="width" id="K3n-L2-lUN"/>
                                             <constraint firstItem="ABx-tf-7bF" firstAttribute="leading" secondItem="9b5-Rv-XQx" secondAttribute="leading" id="KXO-pe-9YW"/>
@@ -1030,6 +1033,7 @@
                         <outlet property="lblTitleYourOrder" destination="iWc-3P-6bJ" id="jT1-2M-e4L"/>
                         <outlet property="lblTotal" destination="tXs-6r-w1S" id="NfP-Yf-PXY"/>
                         <outlet property="lblTotalItems" destination="o7e-R6-5Uz" id="chE-oU-rGy"/>
+                        <outlet property="scrollVw" destination="oCi-3Z-Xzz" id="eeR-Wq-jFy"/>
                         <outlet property="stackDeliver" destination="YWU-DK-3BX" id="C01-1q-rKK"/>
                         <outlet property="stackDeliverHeight" destination="rQJ-uR-A82" id="17p-fT-aRq"/>
                         <outlet property="tblItems" destination="2xw-Ba-cNt" id="tQG-UP-lRL"/>
@@ -1041,6 +1045,17 @@
             <point key="canvasLocation" x="-104" y="-406"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="47B-le-Hhd">
+            <size key="intrinsicContentSize" width="50.5" height="18.5"/>
+        </designable>
+        <designable name="cU2-75-CwY">
+            <size key="intrinsicContentSize" width="96.5" height="18.5"/>
+        </designable>
+        <designable name="knC-wl-eUn">
+            <size key="intrinsicContentSize" width="195" height="32"/>
+        </designable>
+    </designables>
     <resources>
         <image name="codeScanBackground" width="440.5" height="440.5"/>
         <image name="editProfile" width="16" height="16"/>

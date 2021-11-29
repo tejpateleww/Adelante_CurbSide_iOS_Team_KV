@@ -22,13 +22,13 @@
                         <rect key="frame" x="10" y="5" width="602" height="135"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Smith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YSw-Ug-qG8">
-                                <rect key="frame" x="7" y="15" width="448" height="21"/>
+                                <rect key="frame" x="7" y="15" width="388.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Order Id: 132564" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6Y-71-guC">
-                                <rect key="frame" x="465" y="15" width="130" height="21"/>
+                                <rect key="frame" x="405.5" y="15" width="189.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -83,6 +83,7 @@
                             <constraint firstItem="Jhk-z2-byH" firstAttribute="leading" secondItem="YSw-Ug-qG8" secondAttribute="leading" id="U0D-zo-76h"/>
                             <constraint firstItem="gYf-q5-Fz4" firstAttribute="trailing" secondItem="bKX-Sk-wKh" secondAttribute="trailing" id="WBC-cc-Fee"/>
                             <constraint firstItem="Jhk-z2-byH" firstAttribute="top" secondItem="YSw-Ug-qG8" secondAttribute="bottom" constant="12" id="WWb-g6-TO4"/>
+                            <constraint firstItem="s6Y-71-guC" firstAttribute="leading" secondItem="bKX-Sk-wKh" secondAttribute="leading" id="YQi-Ay-NjM"/>
                             <constraint firstItem="bKX-Sk-wKh" firstAttribute="leading" secondItem="MAO-bF-9LD" secondAttribute="trailing" constant="10" id="YRG-YE-YnF"/>
                             <constraint firstItem="EQa-SV-GmU" firstAttribute="centerY" secondItem="ddx-Fm-sDk" secondAttribute="centerY" id="Zne-WC-LNZ"/>
                             <constraint firstItem="EQa-SV-GmU" firstAttribute="trailing" secondItem="Jhk-z2-byH" secondAttribute="trailing" id="bhA-Fa-o9p"/>
@@ -123,10 +124,10 @@
     </objects>
     <resources>
         <namedColor name="HomeCellBG">
-            <color red="0.93725490196078431" green="0.94509803921568625" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.93699997663497925" green="0.94499999284744263" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="ThemeOrange">
-            <color red="0.8901960784313725" green="0.29019607843137252" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.88999998569488525" green="0.28999999165534973" blue="0.14499999582767487" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

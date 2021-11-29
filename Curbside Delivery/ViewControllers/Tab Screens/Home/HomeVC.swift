@@ -20,6 +20,18 @@ class HomeVC: BaseViewController{
     var arrorders : [OrderListDatum] = []
     var isOrderCancelled : Bool = false
     
+    // Pull to refresh
+    let refreshControl = UIRefreshControl()
+    
+    //shimmer
+    var isTblReload = false
+    var isLoading = true {
+        didSet {
+            self.tblOrders.isUserInteractionEnabled = !isLoading
+            self.tblOrders.reloadData()
+        }
+    }
+    
     //MARK: - Life cycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +48,7 @@ class HomeVC: BaseViewController{
         self.setupData()
         self.registerNib()
         self.addNotificationObs()
+        self.addRefreshControl()
     }
     
     func setupUI(){
@@ -61,10 +74,32 @@ class HomeVC: BaseViewController{
         self.tblOrders.register(nib, forCellReuseIdentifier: pendingOrderCell.className)
         let nib1 = UINib(nibName: completeOrderCell.className, bundle: nil)
         self.tblOrders.register(nib1, forCellReuseIdentifier: completeOrderCell.className)
+        
+        let nib2 = UINib(nibName: HomeShimmerCell.className, bundle: nil)
+        self.tblOrders.register(nib2, forCellReuseIdentifier: HomeShimmerCell.className)
+    }
+    
+    func addRefreshControl(){
+        self.refreshControl.attributedTitle = NSAttributedString(string: "")
+        self.refreshControl.tintColor = #colorLiteral(red: 0.8901960784, green: 0.2901960784, blue: 0.1450980392, alpha: 1)
+        self.refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        self.refreshControl.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
+        self.tblOrders.addSubview(self.refreshControl)
     }
     
     func addNotificationObs(){
         NotificationCenter.default.addObserver(self, selector: #selector(self.ReloadData), name: Notification.Name("ReloadData"), object: nil)
+    }
+    
+    @objc func refresh(_ sender: AnyObject) {
+        self.arrorders = []
+        self.isTblReload = false
+        self.isLoading = true
+        if(self.selectedSegmentTag == 0){
+            self.callOrderListApi(orderType:  OrderType.upcoming.rawValue)
+        }else{
+            self.callOrderListApi(orderType:  OrderType.complete.rawValue)
+        }
     }
     
     @objc func ReloadData() {
@@ -89,6 +124,11 @@ class HomeVC: BaseViewController{
     
     //MARK: - @objc methods
     @objc func navigationSegmentedControlValueChanged(_ sender: BetterSegmentedControl) {
+        // to start shimmer again
+        self.arrorders = []
+        self.isTblReload = false
+        self.isLoading = true
+        
         if sender.index == 0 {
             self.selectedSegmentTag = sender.index
             self.callOrderListApi(orderType: OrderType.upcoming.rawValue)
@@ -104,57 +144,105 @@ class HomeVC: BaseViewController{
 extension HomeVC : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.arrorders.count
+        if self.arrorders.count > 0 {
+            return self.arrorders.count
+        } else {
+            return (!self.isTblReload) ? 10 : 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if(self.selectedSegmentTag == 0){
-            let cell = tblOrders.dequeueReusableCell(withIdentifier: pendingOrderCell.className) as! pendingOrderCell
-            cell.selectionStyle = .none
-            
-            cell.lblName.text = self.arrorders[indexPath.row].username ?? ""
-            cell.lblOrderId.text = "Order Id : \(self.arrorders[indexPath.row].id ?? "")"
-            cell.lblOrderAmount.text = "\(CurrencySymbol)\(self.arrorders[indexPath.row].total ?? "")"
-            cell.lblCarNumber.text = self.arrorders[indexPath.row].carNumber ?? ""
-            cell.lblParkingNumber.text = self.arrorders[indexPath.row].parkingNo ?? ""
-            
+        let cell = tblOrders.dequeueReusableCell(withIdentifier: HomeShimmerCell.className) as! HomeShimmerCell
+        if(!self.isTblReload){
+            cell.lblName.text = DummyDataForShimmer
+            cell.lblOrderId.text = DummyDataForShimmer
+            cell.lblOrderAmount.text =  DummyDataForShimmer
+            cell.lblCarNumber.text =  DummyDataForShimmer
+            cell.lblParkingNumber.text =  DummyDataForShimmer
+            cell.lblTitleCarNumber.text =  DummyDataForShimmer
+            cell.lblTitleOrderAmount.text =  DummyDataForShimmer
+            cell.lblTitleParkingNumber.text =  DummyDataForShimmer
             return cell
         }else{
-            let cell = tblOrders.dequeueReusableCell(withIdentifier: completeOrderCell.className) as! completeOrderCell
-            cell.selectionStyle = .none
-            
-            cell.lblName.text = self.arrorders[indexPath.row].username ?? ""
-            cell.lblOrderId.text = "Order Id : \(self.arrorders[indexPath.row].id ?? "")"
-            cell.lblOrderAmount.text = "\(CurrencySymbol)\(self.arrorders[indexPath.row].total ?? "")"
-            cell.lblCarNumber.text = self.arrorders[indexPath.row].carNumber ?? ""
-            cell.lblParkingNumber.text = self.arrorders[indexPath.row].parkingNo ?? ""
-            
-            if(self.arrorders[indexPath.row].status == "5"){
-                cell.vWOrderStatus.backgroundColor = UIColor(hexString: "E91B3E")
-                cell.lblOrderStatus.text = "Order canceled"
+            if(self.arrorders.count > 0){
+                
+                if(self.selectedSegmentTag == 0){
+                    let cell = tblOrders.dequeueReusableCell(withIdentifier: pendingOrderCell.className) as! pendingOrderCell
+                    cell.selectionStyle = .none
+                    
+                    cell.lblName.text = self.arrorders[indexPath.row].username ?? ""
+                    cell.lblOrderId.text = "Order Id : \(self.arrorders[indexPath.row].id ?? "")"
+                    cell.lblOrderAmount.text = "\(CurrencySymbol)\(self.arrorders[indexPath.row].total ?? "")"
+                    cell.lblCarNumber.text = self.arrorders[indexPath.row].carNumber ?? ""
+                    cell.lblParkingNumber.text = self.arrorders[indexPath.row].parkingNo ?? ""
+                    
+                    return cell
+                }else{
+                    let cell = tblOrders.dequeueReusableCell(withIdentifier: completeOrderCell.className) as! completeOrderCell
+                    cell.selectionStyle = .none
+                    
+                    cell.lblName.text = self.arrorders[indexPath.row].username ?? ""
+                    cell.lblOrderId.text = "Order Id : \(self.arrorders[indexPath.row].id ?? "")"
+                    cell.lblOrderAmount.text = "\(CurrencySymbol)\(self.arrorders[indexPath.row].total ?? "")"
+                    cell.lblCarNumber.text = self.arrorders[indexPath.row].carNumber ?? ""
+                    cell.lblParkingNumber.text = self.arrorders[indexPath.row].parkingNo ?? ""
+                    
+                    if(self.arrorders[indexPath.row].status == "5"){
+                        cell.vWOrderStatus.backgroundColor = UIColor(hexString: "E91B3E")
+                        cell.lblOrderStatus.text = "Order canceled"
+                    }else{
+                        cell.vWOrderStatus.backgroundColor = UIColor(hexString: "209413")
+                        cell.lblOrderStatus.text = "Order Delivered"
+                    }
+                    return cell
+                }
+                
             }else{
-                cell.vWOrderStatus.backgroundColor = UIColor(hexString: "209413")
-                cell.lblOrderStatus.text = "Order Delivered"
+                let NoDatacell = self.tblOrders.dequeueReusableCell(withIdentifier: "NoDataTableViewCell", for: indexPath) as! NoDataTableViewCell
+                if(self.selectedSegmentTag == 0){
+                    NoDatacell.lblNoDataTitle.text = "Pending orders not found."
+                }else{
+                    NoDatacell.lblNoDataTitle.text = "Completed orders not found."
+                }
+                return NoDatacell
             }
-            return cell
         }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        if(!isTblReload){
+            return UITableView.automaticDimension
+        }else{
+            if self.arrorders.count != 0 {
+                return UITableView.automaticDimension
+            }else{
+                return tableView.frame.height
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(self.selectedSegmentTag == 0){
-            self.customTabBarController?.selectedIndex = 1
-        }else{
-            if(self.arrorders[indexPath.row].status == "5"){
-                self.isOrderCancelled = true
+        if(self.arrorders.count > 0){ // to avoid no data found cell tap
+            if(self.selectedSegmentTag == 0){
+                self.customTabBarController?.selectedIndex = 1
             }else{
-                self.isOrderCancelled = false
+                if(self.arrorders[indexPath.row].status == "5"){
+                    self.isOrderCancelled = true
+                }else{
+                    self.isOrderCancelled = false
+                }
+                self.callOrderDetailApi(strOrderId: self.arrorders[indexPath.row].id ?? "0",strOrderType: OrderType.complete.rawValue)
             }
-            self.callOrderDetailApi(strOrderId: self.arrorders[indexPath.row].id ?? "0",strOrderType: OrderType.complete.rawValue)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if #available(iOS 13.0, *) {
+            cell.setTemplateWithSubviews(isLoading, animate: true, viewBackgroundColor: .systemBackground)
+        } else {
+            cell.setTemplateWithSubviews(isLoading, animate: true, viewBackgroundColor: UIColor.lightGray.withAlphaComponent(0.3))
         }
     }
 }

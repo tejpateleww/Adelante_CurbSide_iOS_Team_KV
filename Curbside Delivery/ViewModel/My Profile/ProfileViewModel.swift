@@ -17,11 +17,9 @@ class ProfileViewModel{
         WebServiceSubClass.UpdateProfileApi(reqModel: reqModel, imgKey: "remove_image", image: reqImage) { (status, apiMessage, response, error) in
             Utilities.hideHud()
             if status{
-                SingletonClass.sharedInstance.UserProfilData = response?.data
-                userDefaults.setUserData()
-                let _ = userDefaults.getUserData()
-                self.profileVC?.disableData()
-                Toast.show(title: StringConsts.Success, message: apiMessage, state: .success)
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    Toast.show(title: StringConsts.Success, message: apiMessage, state: .success)
+                }
             }else{
                 Toast.show(title: StringConsts.Error, message: apiMessage, state: .failure)
             }

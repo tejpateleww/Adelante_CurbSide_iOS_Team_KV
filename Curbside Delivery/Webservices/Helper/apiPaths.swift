@@ -54,7 +54,8 @@ enum ApiKey: String {
     case orderDetails                             = "order_details"
     case notification                             = "notification"
     case profileEdit                              = "profile_edit"
-    case orderDelivered                              = "order_delivered"
+    case orderDelivered                           = "order_delivered"
+    case removeNotifiaction                       = "remove_notifiaction/"
     
 }
 

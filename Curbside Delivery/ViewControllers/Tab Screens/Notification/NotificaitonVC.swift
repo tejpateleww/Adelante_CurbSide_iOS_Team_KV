@@ -15,6 +15,18 @@ class NotificaitonVC: BaseViewController {
     var arrNotification: [NotificationResDatum] = []
     var notificationUserModel = NotificationUserModel()
     
+    // Pull to refresh
+    let refreshControl = UIRefreshControl()
+    
+    //shimmer
+    var isTblReload = false
+    var isLoading = true {
+        didSet {
+            self.tblNotification.isUserInteractionEnabled = !isLoading
+            self.tblNotification.reloadData()
+        }
+    }
+    
     //MARK: - Life cycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +42,7 @@ class NotificaitonVC: BaseViewController {
         self.registerNib()
         self.setupUI()
         self.setupData()
+        self.addRefreshControl()
     }
     
     func showTabbar(){
@@ -52,6 +65,25 @@ class NotificaitonVC: BaseViewController {
     func registerNib(){
         let nib = UINib(nibName: NotificationCell.className, bundle: nil)
         self.tblNotification.register(nib, forCellReuseIdentifier: NotificationCell.className)
+        
+        let nib2 = UINib(nibName: NotiShimmerCell.className, bundle: nil)
+        self.tblNotification.register(nib2, forCellReuseIdentifier: NotiShimmerCell.className)
+    }
+    
+    func addRefreshControl(){
+        self.refreshControl.attributedTitle = NSAttributedString(string: "")
+        self.refreshControl.tintColor = #colorLiteral(red: 0.8901960784, green: 0.2901960784, blue: 0.1450980392, alpha: 1)
+        self.refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        self.refreshControl.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
+        self.tblNotification.addSubview(self.refreshControl)
+    }
+    
+    
+    @objc func refresh(_ sender: AnyObject) {
+        self.arrNotification = []
+        self.isTblReload = false
+        self.isLoading = true
+        self.callNotificationListApi()
     }
     
     func setupData(){
@@ -63,28 +95,62 @@ class NotificaitonVC: BaseViewController {
 extension NotificaitonVC : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.arrNotification.count
+        if self.arrNotification.count > 0 {
+            return self.arrNotification.count
+        } else {
+            return (!self.isTblReload) ? 10 : 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tblNotification.dequeueReusableCell(withIdentifier: NotificationCell.className) as! NotificationCell
-        cell.selectionStyle = .none
-        
-        cell.lblNotiTitle.text = self.arrNotification[indexPath.row].notificationTitle ?? ""
-        cell.lblNotiDesc.text = self.arrNotification[indexPath.row].descriptionField ?? ""
-        
-        if(cell.lblNotiDesc.text == StringConsts.NotiSessionExpired){
-            cell.imgNoti.image = UIImage(named: "iconNotificationInfo")
+        let cell = tblNotification.dequeueReusableCell(withIdentifier: NotiShimmerCell.className) as! NotiShimmerCell
+        if(!self.isTblReload){
+            cell.lblNotiDesc.text = DummyDataForShimmer
+            cell.lblNotiTitle.text = DummyDataForShimmer
+            return cell
         }else{
-            cell.imgNoti.image = UIImage(named: "iconNotiSuccess")//iconNotiFail
+            if(self.arrNotification.count > 0){
+                
+                let cell = tblNotification.dequeueReusableCell(withIdentifier: NotificationCell.className) as! NotificationCell
+                cell.selectionStyle = .none
+                
+                cell.lblNotiTitle.text = self.arrNotification[indexPath.row].notificationTitle ?? ""
+                cell.lblNotiDesc.text = self.arrNotification[indexPath.row].descriptionField ?? ""
+                
+                if(cell.lblNotiDesc.text == StringConsts.NotiSessionExpired){
+                    cell.imgNoti.image = UIImage(named: "iconNotificationInfo")
+                }else{
+                    cell.imgNoti.image = UIImage(named: "iconNotiSuccess")//iconNotiFail
+                }
+                return cell
+            }else{
+                let NoDatacell = self.tblNotification.dequeueReusableCell(withIdentifier: "NoDataTableViewCell", for: indexPath) as! NoDataTableViewCell
+                NoDatacell.lblNoDataTitle.text = "Notifications not found."
+                return NoDatacell
+            }
         }
-        
-        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        if(!isTblReload){
+            return UITableView.automaticDimension
+        }else{
+            if self.arrNotification.count != 0 {
+                return UITableView.automaticDimension
+            }else{
+                return tableView.frame.height
+            }
+        }
+
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if #available(iOS 13.0, *) {
+            cell.setTemplateWithSubviews(isLoading, animate: true, viewBackgroundColor: .systemBackground)
+        } else {
+            cell.setTemplateWithSubviews(isLoading, animate: true, viewBackgroundColor: UIColor.lightGray.withAlphaComponent(0.3))
+        }
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -93,7 +159,7 @@ extension NotificaitonVC : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == UITableViewCell.EditingStyle.delete) {
-            
+            self.callDeleteNotiApi(Id: self.arrNotification[indexPath.row].id ?? "")
         }
     }
 }
@@ -107,4 +173,10 @@ extension NotificaitonVC{
         let reqModel = NotificationReqModel()
         self.notificationUserModel.webserviceNotificationList(reqModel: reqModel)
     }
+    
+    func callDeleteNotiApi(Id:String){
+        self.notificationUserModel.notificaitonVC = self
+        self.notificationUserModel.webserviceDeleteNotiAPI(NotificationId: Id)
+    }
+
 }

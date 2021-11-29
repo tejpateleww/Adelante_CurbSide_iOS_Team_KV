@@ -15,6 +15,7 @@ let kAPPVesion = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as!
 var userDefault = UserDefaults.standard
 let userDefaults = UserDefaults.standard
 let CurrencySymbol = "$"
+let DummyDataForShimmer = "Dummy Data.."
 
 let SessionExpiredResponseDic = [StringConsts.ResponseMessage: StringConsts.SessionExpired]
 let SomethingWentWrongResponseDic = [StringConsts.ResponseMessage: StringConsts.SomethingWentWrong]
