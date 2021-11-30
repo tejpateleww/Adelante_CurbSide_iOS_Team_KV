@@ -114,13 +114,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconOffline" translatesAutoresizingMaskIntoConstraints="NO" id="MEJ-2P-ql0">
-                                <rect key="frame" x="143" y="249.5" width="128" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="MEJ-2P-ql0" secondAttribute="height" id="oHL-7j-ymc"/>
-                                    <constraint firstAttribute="height" constant="128" id="qVo-bq-fFb"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Could not connect to the internet. Please check your network." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Uw-x9-1Yt">
                                 <rect key="frame" x="30" y="427.5" width="354" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -143,25 +136,32 @@
                                     <action selector="btnRetryAction:" destination="y5t-XY-Hac" eventType="touchUpInside" id="3bt-5q-TEw"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kUL-tJ-ZkI" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="132" y="267.5" width="150" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kUL-tJ-ZkI" secondAttribute="height" id="KUr-eP-tIC"/>
+                                    <constraint firstAttribute="height" constant="150" id="uOQ-fg-4zE"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Xhs-oZ-gIk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Jc8-3f-yW4" firstAttribute="centerX" secondItem="5Uw-x9-1Yt" secondAttribute="centerX" id="1Ax-Mv-XGf"/>
                             <constraint firstItem="Xhs-oZ-gIk" firstAttribute="trailing" secondItem="5Uw-x9-1Yt" secondAttribute="trailing" constant="30" id="4Sp-to-00L"/>
-                            <constraint firstItem="5Uw-x9-1Yt" firstAttribute="top" secondItem="MEJ-2P-ql0" secondAttribute="bottom" constant="50" id="EjU-Gg-OO4"/>
                             <constraint firstItem="5Uw-x9-1Yt" firstAttribute="centerY" secondItem="7fz-EJ-WYE" secondAttribute="centerY" id="IKP-w3-WDT"/>
+                            <constraint firstItem="5Uw-x9-1Yt" firstAttribute="top" secondItem="kUL-tJ-ZkI" secondAttribute="bottom" constant="10" id="bIO-qE-VUe"/>
                             <constraint firstItem="5Uw-x9-1Yt" firstAttribute="leading" secondItem="Xhs-oZ-gIk" secondAttribute="leading" constant="30" id="cX7-5b-bzd"/>
-                            <constraint firstItem="MEJ-2P-ql0" firstAttribute="centerX" secondItem="Xhs-oZ-gIk" secondAttribute="centerX" id="q7A-8t-Ei6"/>
+                            <constraint firstItem="kUL-tJ-ZkI" firstAttribute="centerX" secondItem="5Uw-x9-1Yt" secondAttribute="centerX" id="dsD-l2-0kJ"/>
                             <constraint firstItem="Jc8-3f-yW4" firstAttribute="width" secondItem="7fz-EJ-WYE" secondAttribute="width" multiplier="0.8" id="uOH-mM-vV8"/>
-                            <constraint firstItem="5Uw-x9-1Yt" firstAttribute="centerX" secondItem="MEJ-2P-ql0" secondAttribute="centerX" id="vyF-K3-y5L"/>
                             <constraint firstItem="Jc8-3f-yW4" firstAttribute="top" secondItem="5Uw-x9-1Yt" secondAttribute="bottom" constant="50" id="yve-Vm-L9l"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btnRetry" destination="Jc8-3f-yW4" id="aG0-iI-Y4m"/>
-                        <outlet property="imgOffline" destination="MEJ-2P-ql0" id="3On-Y4-Q21"/>
                         <outlet property="lblOffline" destination="5Uw-x9-1Yt" id="lDX-0N-FEj"/>
+                        <outlet property="vWAnimation" destination="kUL-tJ-ZkI" id="1c1-3k-HdG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sXn-k3-Uhi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -681,7 +681,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Smith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qu2-Pa-gFS">
                                                 <rect key="frame" x="164" y="30" width="86" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" name="ThemeOrange"/>
+                                                <color key="textColor" red="0.8901960784313725" green="0.29019607843137252" blue="0.14509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parking Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bA-tL-tsj">
@@ -1047,10 +1047,10 @@
     </scenes>
     <designables>
         <designable name="47B-le-Hhd">
-            <size key="intrinsicContentSize" width="50.5" height="18.5"/>
+            <size key="intrinsicContentSize" width="374" height="39.220703125"/>
         </designable>
         <designable name="cU2-75-CwY">
-            <size key="intrinsicContentSize" width="96.5" height="18.5"/>
+            <size key="intrinsicContentSize" width="374" height="39.220703125"/>
         </designable>
         <designable name="knC-wl-eUn">
             <size key="intrinsicContentSize" width="195" height="32"/>
@@ -1060,7 +1060,6 @@
         <image name="codeScanBackground" width="440.5" height="440.5"/>
         <image name="editProfile" width="16" height="16"/>
         <image name="iconCorrect" width="82.5" height="82.5"/>
-        <image name="iconOffline" width="117.5" height="107.5"/>
         <image name="imgProfile" width="84" height="84"/>
         <image name="tabBg" width="46" height="46"/>
         <image name="tabHomeSelected" width="19.5" height="19"/>

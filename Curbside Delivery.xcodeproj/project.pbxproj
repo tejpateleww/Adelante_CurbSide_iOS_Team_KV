@@ -15,9 +15,11 @@
 		881D7C5E274E15AB00B7A91D /* NotificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D7C5D274E15AB00B7A91D /* NotificationViewModel.swift */; };
 		881D7C61274E1F3B00B7A91D /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D7C60274E1F3B00B7A91D /* ProfileViewModel.swift */; };
 		881D7C63274E1F6A00B7A91D /* ProfileReqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D7C62274E1F6A00B7A91D /* ProfileReqModel.swift */; };
-		883484B52744E9A400A6A499 /* FlashButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883484B42744E9A400A6A499 /* FlashButton.swift */; };
 		883484B82744F56E00A6A499 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883484B72744F56E00A6A499 /* QRScannerView.swift */; };
 		883484BD2745298C00A6A499 /* DeliverSuccessPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883484BC2745298C00A6A499 /* DeliverSuccessPopUpVC.swift */; };
+		884485E52755F8FF000DC60A /* EditUserResProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884485E32755F8FF000DC60A /* EditUserResProfile.swift */; };
+		884485E62755F8FF000DC60A /* EditUserResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884485E42755F8FF000DC60A /* EditUserResModel.swift */; };
+		884485EC2756081E000DC60A /* Offline.json in Resources */ = {isa = PBXBuildFile; fileRef = 884485EB2756081E000DC60A /* Offline.json */; };
 		885E9D5327423491008D6C85 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885E9D4B27423491008D6C85 /* CustomSlider.swift */; };
 		885E9D5427423491008D6C85 /* customView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885E9D4C27423491008D6C85 /* customView.swift */; };
 		885E9D5527423491008D6C85 /* customButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885E9D4D27423491008D6C85 /* customButton.swift */; };
@@ -154,9 +156,11 @@
 		881D7C5D274E15AB00B7A91D /* NotificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewModel.swift; sourceTree = "<group>"; };
 		881D7C60274E1F3B00B7A91D /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		881D7C62274E1F6A00B7A91D /* ProfileReqModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileReqModel.swift; sourceTree = "<group>"; };
-		883484B42744E9A400A6A499 /* FlashButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlashButton.swift; sourceTree = "<group>"; };
 		883484B72744F56E00A6A499 /* QRScannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
 		883484BC2745298C00A6A499 /* DeliverSuccessPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliverSuccessPopUpVC.swift; sourceTree = "<group>"; };
+		884485E32755F8FF000DC60A /* EditUserResProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditUserResProfile.swift; sourceTree = "<group>"; };
+		884485E42755F8FF000DC60A /* EditUserResModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditUserResModel.swift; sourceTree = "<group>"; };
+		884485EB2756081E000DC60A /* Offline.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Offline.json; sourceTree = "<group>"; };
 		885E9D4B27423491008D6C85 /* CustomSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		885E9D4C27423491008D6C85 /* customView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customView.swift; sourceTree = "<group>"; };
 		885E9D4D27423491008D6C85 /* customButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customButton.swift; sourceTree = "<group>"; };
@@ -350,6 +354,15 @@
 			path = PopUp;
 			sourceTree = "<group>";
 		};
+		884485E22755F8E7000DC60A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				884485E42755F8FF000DC60A /* EditUserResModel.swift */,
+				884485E32755F8FF000DC60A /* EditUserResProfile.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		885E9D4A27423491008D6C85 /* CustomClass */ = {
 			isa = PBXGroup;
 			children = (
@@ -449,6 +462,7 @@
 		88708DED274CB40700C9D6C1 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				884485EB2756081E000DC60A /* Offline.json */,
 				886445CE2754ECB80004D9E3 /* loading.json */,
 			);
 			path = Lottie;
@@ -670,7 +684,6 @@
 			isa = PBXGroup;
 			children = (
 				88F9DC84274269A100735D57 /* ScanQRcodeVC.swift */,
-				883484B42744E9A400A6A499 /* FlashButton.swift */,
 			);
 			path = "Scan QR";
 			sourceTree = "<group>";
@@ -820,6 +833,7 @@
 		88F26580274BC2C600077772 /* Response */ = {
 			isa = PBXGroup;
 			children = (
+				884485E22755F8E7000DC60A /* Profile */,
 				886ED1B6274F727800971F75 /* Common */,
 				881D7C54274E14DB00B7A91D /* Notification */,
 				88708DFE274CE3EB00C9D6C1 /* QR Code Scan */,
@@ -1055,6 +1069,7 @@
 				886445CD2754E34E0004D9E3 /* NotiShimmerCell.xib in Resources */,
 				88BA98FD27300F2D00DB38C1 /* NexaXBold.otf in Resources */,
 				88E058692743E74C006DBC5A /* OrderItemCell.xib in Resources */,
+				884485EC2756081E000DC60A /* Offline.json in Resources */,
 				887B6C17272FA97C00CBAEEF /* LaunchScreen.storyboard in Resources */,
 				88F9DC972742814000735D57 /* Colors.xcassets in Resources */,
 				88BA98F927300F2D00DB38C1 /* NexaBookItalic.otf in Resources */,
@@ -1224,13 +1239,14 @@
 				88708E02274CE3FF00C9D6C1 /* QRCodeResDatum.swift in Sources */,
 				88F9DC89274269BD00735D57 /* NotificaitonVC.swift in Sources */,
 				885E9DBF27423CD6008D6C85 /* UIView+Extension.swift in Sources */,
+				884485E62755F8FF000DC60A /* EditUserResModel.swift in Sources */,
 				88F26583274BC2D700077772 /* InitResponseModel.swift in Sources */,
-				883484B52744E9A400A6A499 /* FlashButton.swift in Sources */,
 				88E069312746450B00E4B8C6 /* UploadMediaModel.swift in Sources */,
 				88F9DC8E2742801100735D57 /* pendingOrderCell.swift in Sources */,
 				887B6CD3272FBC6000CBAEEF /* IQTextView+Extension.swift in Sources */,
 				881D7C57274E14E700B7A91D /* NotificationResDatum.swift in Sources */,
 				88E069352746467F00E4B8C6 /* Constants.swift in Sources */,
+				884485E52755F8FF000DC60A /* EditUserResProfile.swift in Sources */,
 				887B6C9E272FBBEB00CBAEEF /* AppStoryboards.swift in Sources */,
 				88E058642743E70D006DBC5A /* OrderDetailVC.swift in Sources */,
 				88E06937274649C600E4B8C6 /* Singleton.swift in Sources */,

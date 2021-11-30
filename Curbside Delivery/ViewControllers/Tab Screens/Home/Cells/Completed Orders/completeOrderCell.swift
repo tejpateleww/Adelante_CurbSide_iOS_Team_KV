@@ -9,6 +9,7 @@ import UIKit
 
 class completeOrderCell: UITableViewCell {
     
+    //MARK: - Variables
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblOrderId: UILabel!
     @IBOutlet weak var lblTitleOrderAmount: UILabel!
@@ -22,6 +23,7 @@ class completeOrderCell: UITableViewCell {
     @IBOutlet weak var vWOrderStatus: UIView!
     
 
+    //MARK: - awakeFromNib
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setupUI()
@@ -34,6 +36,7 @@ class completeOrderCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    //MARK: - Custom methods
     func setupUI(){
         self.lblName.font = FontBook.bold.font(ofSize: 21)
         self.lblOrderId.font = FontBook.bold.font(ofSize: 12)

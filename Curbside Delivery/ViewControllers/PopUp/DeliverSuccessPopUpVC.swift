@@ -8,13 +8,12 @@
 import UIKit
 
 class DeliverSuccessPopUpVC: BaseViewController {
-   
+    
     //MARK: - Variables
     @IBOutlet weak var imgCorrect: UIImageView!
     @IBOutlet weak var lblMessage: UILabel!
     @IBOutlet weak var lblMessage2: UILabel!
     @IBOutlet weak var btnOg: submitButton!
-    
     @IBOutlet private weak var viewPopupUI:UIView!
     @IBOutlet private weak var viewMain:UIView!
     
@@ -25,7 +24,7 @@ class DeliverSuccessPopUpVC: BaseViewController {
         super.viewDidLoad()
         self.prepareView()
     }
-
+    
     //MARK: - Custom Method
     func prepareView(){
         self.setupUI()

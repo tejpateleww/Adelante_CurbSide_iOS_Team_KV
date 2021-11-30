@@ -9,7 +9,7 @@
 import UIKit
 
 class LoginViewController: BaseViewController {
-
+    
     //MARK: - Variables
     @IBOutlet weak var lblTitle: themeTitleLabel!
     @IBOutlet weak var txtEmail : floatTextField!
@@ -19,14 +19,13 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var btnPasswordVisible: UIButton!
     
     var loginUserModel = LoginUserModel()
-    let ACCEPTABLE_CHARACTERS_FOR_EMAIL = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@."
-    let RISTRICTED_CHARACTERS_FOR_PASSWORD = " "
+    var ACCEPTABLE_CHARACTERS_FOR_EMAIL = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@."
+    var RISTRICTED_CHARACTERS_FOR_PASSWORD = " "
     
-    //MARK: - Life cycle methods
+    //MARK: - Life-Cycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.prepareView()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,16 +41,13 @@ class LoginViewController: BaseViewController {
     
     //MARK: - Custom methods
     func prepareView(){
-        
         self.addNavBarImage(isLeft: true, isRight: true)
         self.setNavigationBarInViewController(controller: self, naviColor: colors.appOrangeColor.value, naviTitle: NavTitles.none.value, leftImage: NavItemsLeft.back.value, rightImages: [NavItemsRight.none.value], isTranslucent: true, isShowHomeTopBar: false)
-        
         self.lblTitle.text = "Welcome Back"
         self.txtEmail.placeholder = "Email Id"
         self.txtPassword.placeholder = "Password"
         self.btnForgotPassword.setTitle("Forgot Password", for: .normal)
         self.lblSignin.text = "Sign In"
-        
         self.txtEmail.autocorrectionType = .no
     }
     
@@ -95,7 +91,6 @@ class LoginViewController: BaseViewController {
         if validation(){
             self.callLoginApi()
         }
-        
     }
 }
 
@@ -108,12 +103,11 @@ extension LoginViewController : UITextFieldDelegate{
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         switch textField {
-        
         case self.txtEmail :
             let cs = NSCharacterSet(charactersIn: ACCEPTABLE_CHARACTERS_FOR_EMAIL).inverted
             let filtered = string.components(separatedBy: cs).joined(separator: "")
             return (string == filtered)
-
+            
         case self.txtPassword :
             let set = CharacterSet(charactersIn: RISTRICTED_CHARACTERS_FOR_PASSWORD)
             let inverted = set.inverted
@@ -139,7 +133,6 @@ extension LoginViewController{
         let reqModel = LoginRequestModel()
         reqModel.userName = self.txtEmail.text ?? ""
         reqModel.password = self.txtPassword.text ?? ""
-        
         self.loginUserModel.webserviceLogin(reqModel: reqModel)
     }
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class OrderDetailVC: BaseViewController {
     
-    //MARK:- Variables
+    //MARK: - Variables
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblParkingNumber: UILabel!
     @IBOutlet weak var lblCarNumber: UILabel!
@@ -44,7 +44,6 @@ class OrderDetailVC: BaseViewController {
     @IBOutlet weak var stackDeliverHeight: NSLayoutConstraint!
     @IBOutlet weak var scrollVw: UIScrollView!
     
-    
     var customTabBarController: CustomTabBarVC?
     var isFromScanCode : Bool = false
     var isFromCanceledOrder : Bool = false
@@ -53,7 +52,7 @@ class OrderDetailVC: BaseViewController {
     var deliverUserModel = DeliverUserModel()
     var strQRCode : String = ""
     
-    //MARK:- Life cycle methods
+    //MARK: - Life cycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         self.prepareView()
@@ -71,7 +70,7 @@ class OrderDetailVC: BaseViewController {
         }
     }
     
-    //MARK:- Custom methods
+    //MARK: - Custom methods
     func prepareView(){
         self.registerNib()
         self.setupUI()
@@ -179,6 +178,7 @@ class OrderDetailVC: BaseViewController {
         self.lblCanceled.transform = CGAffineTransform(rotationAngle: -.pi/4)
     }
     
+    //MARK: - UIButton action methods
     @IBAction func btnDeliverAction(_ sender: Any) {
         self.callDeliverApi()
     }

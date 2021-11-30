@@ -9,11 +9,13 @@ import UIKit
 
 class OrderItemCell: UITableViewCell {
     
+    //MARK: - Variables
     @IBOutlet weak var lblItemName: UILabel!
     @IBOutlet weak var lblItemQty: UILabel!
     @IBOutlet weak var lblItemPrice: UILabel!
     @IBOutlet weak var lblDate: UILabel!
     
+    //MARK: - Life-Cycle methods
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setupUI()
@@ -25,6 +27,7 @@ class OrderItemCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    //MARK: - Custom methods
     func setupUI(){
         self.lblItemName.font = FontBook.bold.font(ofSize: 14)
         self.lblItemQty.font = FontBook.bold.font(ofSize: 14)

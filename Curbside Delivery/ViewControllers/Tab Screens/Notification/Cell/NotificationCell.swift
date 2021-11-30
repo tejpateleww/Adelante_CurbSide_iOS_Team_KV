@@ -9,13 +9,14 @@ import UIKit
 
 class NotificationCell: UITableViewCell {
     
-    
+    //MARK: -Variables
     @IBOutlet weak var vwContainer: UIView!
     @IBOutlet weak var vWImage: UIView!
     @IBOutlet weak var imgNoti: UIImageView!
     @IBOutlet weak var lblNotiTitle: UILabel!
     @IBOutlet weak var lblNotiDesc: UILabel!
     
+    //MARK: - Life-Cycle methods
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setupUI()
@@ -27,6 +28,7 @@ class NotificationCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    //MARK: - Custom methods
     func setupUI(){
         self.vWImage.layer.cornerRadius = self.vWImage.frame.size.width/2
         self.vWImage.clipsToBounds = true

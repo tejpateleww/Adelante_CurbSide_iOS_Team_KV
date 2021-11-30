@@ -9,6 +9,7 @@ import UIKit
 
 class pendingOrderCell: UITableViewCell {
     
+    //MARK: - Variables
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblOrderId: UILabel!
     @IBOutlet weak var lblTitleOrderAmount: UILabel!
@@ -19,6 +20,7 @@ class pendingOrderCell: UITableViewCell {
     @IBOutlet weak var lblParkingNumber: UILabel!
     @IBOutlet weak var vwContainer: UIView!
 
+    //MARK: - Life-Cycle methods
     override func awakeFromNib() {
         super.awakeFromNib()
         self.setupUI()
@@ -30,6 +32,7 @@ class pendingOrderCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    //MARK: - Custom methods
     func setupUI(){
         self.lblName.font = FontBook.bold.font(ofSize: 21)
         self.lblOrderId.font = FontBook.bold.font(ofSize: 12)

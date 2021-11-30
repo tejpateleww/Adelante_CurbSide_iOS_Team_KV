@@ -9,11 +9,10 @@ import UIKit
 import CoreLocation
 
 class SplashVC: BaseViewController {
-
+    
     //MARK: - Life-Cycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.webserviceInit()
         }
@@ -39,8 +38,6 @@ class SplashVC: BaseViewController {
             AppDelegate.current.navigateToLogin()
         }
     }
-    
-
 }
 
 //MARK: - Apis

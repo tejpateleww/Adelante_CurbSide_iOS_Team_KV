@@ -70,4 +70,10 @@ class WebServiceSubClass{
         }
     }
     
+    class func getUserProfileApi(completion: @escaping (Bool,String,EditUserResModel?,Any) -> ()) {
+        URLSessionRequestManager.makeGetRequest(urlString: ApiKey.editProfile.rawValue + SingletonClass.sharedInstance.UserId, responseModel: EditUserResModel.self) { (status, message, response, error) in
+            completion(status, message, response, error)
+        }
+    }
+    
 }

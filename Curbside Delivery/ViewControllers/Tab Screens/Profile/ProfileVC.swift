@@ -42,6 +42,7 @@ class ProfileVC: BaseViewController {
         self.setupUI()
         self.setupData()
         self.disableData()
+        self.callGetUserProfile()
     }
     
     func showTabbar(){
@@ -74,6 +75,16 @@ class ProfileVC: BaseViewController {
         
         self.imgProfile.sd_imageIndicator = SDWebImageActivityIndicator.gray
         let ProfileURL = "\(APIEnvironment.ProfileBasrURL.rawValue)\(SingletonClass.sharedInstance.UserProfilData?.profilePicture ?? "")"
+        self.imgProfile.sd_setImage(with: URL(string: ProfileURL), placeholderImage: UIImage(named: "imgProfile"), options: .refreshCached, completed: nil)
+    }
+    
+    func setupDataFromRes(UserInfo : EditUserResProfile){
+        self.lblName.text =  UserInfo.fullName ?? SingletonClass.sharedInstance.UserProfilData?.fullName ?? ""
+        self.txtEmail.text = UserInfo.email ?? SingletonClass.sharedInstance.UserProfilData?.email ?? ""
+        self.txtPhoneNumber.text =  UserInfo.phone ?? SingletonClass.sharedInstance.UserProfilData?.phone ?? ""
+        
+        self.imgProfile.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        let ProfileURL = "\(APIEnvironment.ProfileBasrURL.rawValue)\(UserInfo.profilePicture ?? SingletonClass.sharedInstance.UserProfilData?.profilePicture ?? "")"
         self.imgProfile.sd_setImage(with: URL(string: ProfileURL), placeholderImage: UIImage(named: "imgProfile"), options: .refreshCached, completed: nil)
     }
     
@@ -130,7 +141,7 @@ class ProfileVC: BaseViewController {
     
 }
 
-//MARK:- UIImagePickerControllerDelegate Method
+//MARK: - UIImagePickerControllerDelegate Method
 extension ProfileVC : UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
     public func imagePickerController(_ picker: UIImagePickerController,
@@ -141,7 +152,6 @@ extension ProfileVC : UIImagePickerControllerDelegate,UINavigationControllerDele
             Utilities.showAlert(AppName, message: "Please select image to upload", vc: self)
         }else{
             self.imgProfile.image = pickedImage
-            //self.callUploadSingleDocApi(uploadImage: pickedImage!)
         }
         dismiss(animated: true)
     }
@@ -213,7 +223,7 @@ extension ProfileVC : UIImagePickerControllerDelegate,UINavigationControllerDele
     }
 }
 
-//MARK:- Api Call
+//MARK: - Api Call
 extension ProfileVC{
     
     func callUpdateUserProfile(){
@@ -227,6 +237,11 @@ extension ProfileVC{
         UploadReq.lastName = splits?[1] ?? ""
         
         self.profileViewModel.webserviceProfileUpdateAPI(reqModel: UploadReq, reqImage: self.imgProfile.image!)
+    }
+    
+    func callGetUserProfile(){
+        self.profileViewModel.profileVC = self
+        self.profileViewModel.webserviceGetUserInfo()
     }
     
 }
