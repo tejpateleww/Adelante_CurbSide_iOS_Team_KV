@@ -19,6 +19,8 @@ pod 'BetterSegmentedControl'
 pod 'GrowingTextView', '0.7.2'
 pod 'lottie-ios'
 pod 'SkeletonView'
+pod 'Firebase/Messaging'
+pod 'Firebase/Crashlytics'
 
 
   target 'Curbside DeliveryTests' do

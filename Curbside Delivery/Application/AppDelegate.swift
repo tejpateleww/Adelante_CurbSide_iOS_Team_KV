@@ -8,9 +8,14 @@
 import UIKit
 import IQKeyboardManagerSwift
 import Alamofire
+import Firebase
+import FirebaseMessaging
+import FirebaseCore
+import FirebaseCrashlytics
+import UserNotifications
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDelegate,MessagingDelegate {
     
     //MARK: - Properties
     static var current: AppDelegate {
@@ -20,13 +25,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window:UIWindow?
     var offlineStatue : Bool = false
     var locationService = LocationService()
-
+    static var pushNotificationObj : NotificationObjectModel?
+    static var pushNotificationType : String?
+    
     //MARK: - Life cycle methods
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        //print(UIFont.fontNames(forFamilyName: "Nexa"))
+
         self.checkConnction()
         self.setupKeyboardManager()
+        FirebaseApp.configure()
+        self.registerForPushNotifications()
         return true
     }
     
@@ -36,15 +44,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         IQKeyboardManager.shared.previousNextDisplayMode = .default
         IQKeyboardManager.shared.shouldShowToolbarPlaceholder = true
-        //IQKeyboardManager.shared.disabledToolbarClasses = [ChatRoomVC.self]
     }
     
-    
     func navigateToLogin() {
-       let controller = AppStoryboard.Auth.instance.instantiateViewController(withIdentifier: LoginViewController.storyboardID) as? LoginViewController
-       let nav = UINavigationController(rootViewController: controller!)
+        let controller = AppStoryboard.Auth.instance.instantiateViewController(withIdentifier: LoginViewController.storyboardID) as? LoginViewController
+        let nav = UINavigationController(rootViewController: controller!)
         nav.navigationBar.isHidden = true
-       self.window?.rootViewController = nav
+        self.window?.rootViewController = nav
     }
     
     func navigateToHome() {
@@ -74,23 +80,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             case .notReachable :
                 print("not reachable")
                 self.offlineStatue = true
-//                let banner = StatusBarNotificationBanner(title: "connection lost", style: .danger)
-//                banner.show()
                 AppDelegate.current.showOfflineVC()
             case .reachable(.cellular) :
                 print("cellular")
                 if(self.offlineStatue){
                     self.offlineStatue = false
-//                    let banner = StatusBarNotificationBanner(title: "back online", style: .success)
-//                    banner.show()
                     AppDelegate.current.hideOfflineVC()
                 }
             case .reachable(.ethernetOrWiFi) :
                 print("ethernetOrWiFi")
                 if(self.offlineStatue){
                     self.offlineStatue = false
-//                    let banner = StatusBarNotificationBanner(title: "back online", style: .success)
-//                    banner.show()
                     AppDelegate.current.hideOfflineVC()
                 }
             default :
@@ -100,7 +100,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func showOfflineVC(){
-       let topVC = UIApplication.appTopViewController()
+        let topVC = UIApplication.appTopViewController()
         if (topVC?.isKind(of: OfflineVC.self) ?? false){
             return
         }else{
@@ -115,7 +115,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func hideOfflineVC(){
         UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: true, completion: nil)
     }
-
+    
 }
 
 extension UIApplication {

@@ -21,6 +21,8 @@ let SessionExpiredResponseDic = [StringConsts.ResponseMessage: StringConsts.Sess
 let SomethingWentWrongResponseDic = [StringConsts.ResponseMessage: StringConsts.SomethingWentWrong]
 let NoInternetResponseDic = [StringConsts.ResponseMessage: StringConsts.NoInternetConnection]
 
+let NotificationBadges = NSNotification.Name(rawValue: "NotificationBadges")
+
 enum UserDefaultsKey : String {
     case userProfile = "userProfile"
     case isUserLogin = "isUserLogin"

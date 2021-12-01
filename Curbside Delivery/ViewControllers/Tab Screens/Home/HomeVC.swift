@@ -149,7 +149,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource{
         } else {
             return (!self.isTblReload) ? 10 : 1
         }
-    }
+    } //AHMPP6805H 08-12-1968
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         

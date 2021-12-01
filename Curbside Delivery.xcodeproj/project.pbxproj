@@ -20,6 +20,8 @@
 		884485E52755F8FF000DC60A /* EditUserResProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884485E32755F8FF000DC60A /* EditUserResProfile.swift */; };
 		884485E62755F8FF000DC60A /* EditUserResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884485E42755F8FF000DC60A /* EditUserResModel.swift */; };
 		884485EC2756081E000DC60A /* Offline.json in Resources */ = {isa = PBXBuildFile; fileRef = 884485EB2756081E000DC60A /* Offline.json */; };
+		884C7CD42757505400BB2C08 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 884C7CD32757505400BB2C08 /* GoogleService-Info.plist */; };
+		884C7CDA27575E5300BB2C08 /* AppDelegate+PushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884C7CD927575E5300BB2C08 /* AppDelegate+PushNotification.swift */; };
 		885E9D5327423491008D6C85 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885E9D4B27423491008D6C85 /* CustomSlider.swift */; };
 		885E9D5427423491008D6C85 /* customView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885E9D4C27423491008D6C85 /* customView.swift */; };
 		885E9D5527423491008D6C85 /* customButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885E9D4D27423491008D6C85 /* customButton.swift */; };
@@ -161,6 +163,9 @@
 		884485E32755F8FF000DC60A /* EditUserResProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditUserResProfile.swift; sourceTree = "<group>"; };
 		884485E42755F8FF000DC60A /* EditUserResModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditUserResModel.swift; sourceTree = "<group>"; };
 		884485EB2756081E000DC60A /* Offline.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Offline.json; sourceTree = "<group>"; };
+		884C7CD32757505400BB2C08 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		884C7CD927575E5300BB2C08 /* AppDelegate+PushNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+PushNotification.swift"; sourceTree = "<group>"; };
+		884C7CDB2757608800BB2C08 /* Curbside Delivery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Curbside Delivery.entitlements"; sourceTree = "<group>"; };
 		885E9D4B27423491008D6C85 /* CustomSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		885E9D4C27423491008D6C85 /* customView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customView.swift; sourceTree = "<group>"; };
 		885E9D4D27423491008D6C85 /* customButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customButton.swift; sourceTree = "<group>"; };
@@ -528,6 +533,8 @@
 		887B6C09272FA97A00CBAEEF /* Curbside Delivery */ = {
 			isa = PBXGroup;
 			children = (
+				884C7CDB2757608800BB2C08 /* Curbside Delivery.entitlements */,
+				884C7CD32757505400BB2C08 /* GoogleService-Info.plist */,
 				887B6C18272FA97C00CBAEEF /* Info.plist */,
 				887B6C3C272FAE0A00CBAEEF /* Application */,
 				88F2657F274BC2B900077772 /* Models */,
@@ -587,6 +594,7 @@
 			isa = PBXGroup;
 			children = (
 				887B6C0A272FA97A00CBAEEF /* AppDelegate.swift */,
+				884C7CD927575E5300BB2C08 /* AppDelegate+PushNotification.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -963,6 +971,7 @@
 				887B6C04272FA97A00CBAEEF /* Frameworks */,
 				887B6C05272FA97A00CBAEEF /* Resources */,
 				F16903D139D244FFACC12422 /* [CP] Embed Pods Frameworks */,
+				884C7CD82757597C00BB2C08 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1064,6 +1073,7 @@
 				887B6C99272FB57F00CBAEEF /* Auth.storyboard in Resources */,
 				886445C12754D7920004D9E3 /* HomeShimmerCell.xib in Resources */,
 				88F9DC8F2742801100735D57 /* pendingOrderCell.xib in Resources */,
+				884C7CD42757505400BB2C08 /* GoogleService-Info.plist in Resources */,
 				88BA98FA27300F2D00DB38C1 /* NexaBlack.otf in Resources */,
 				88F9DC952742803C00735D57 /* completeOrderCell.xib in Resources */,
 				886445CD2754E34E0004D9E3 /* NotiShimmerCell.xib in Resources */,
@@ -1152,6 +1162,25 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		884C7CD82757597C00BB2C08 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
+		};
 		92904FCB3F10750DECAF65BC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1237,6 +1266,7 @@
 				887B6CCE272FBC6000CBAEEF /* Extension+NSMutableAttributedString.swift in Sources */,
 				88A8F272274220C800627A6C /* BaseViewController.swift in Sources */,
 				88708E02274CE3FF00C9D6C1 /* QRCodeResDatum.swift in Sources */,
+				884C7CDA27575E5300BB2C08 /* AppDelegate+PushNotification.swift in Sources */,
 				88F9DC89274269BD00735D57 /* NotificaitonVC.swift in Sources */,
 				885E9DBF27423CD6008D6C85 /* UIView+Extension.swift in Sources */,
 				884485E62755F8FF000DC60A /* EditUserResModel.swift in Sources */,
@@ -1478,9 +1508,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Curbside Delivery/Curbside Delivery.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0.0;
-				DEVELOPMENT_TEAM = LNR2265795;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 47RU9D4XHG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Curbside Delivery/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "App would like to access camera to scan QR codes";
@@ -1512,9 +1544,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Curbside Delivery/Curbside Delivery.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0.0;
-				DEVELOPMENT_TEAM = LNR2265795;
+				DEVELOPMENT_TEAM = 47RU9D4XHG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Curbside Delivery/Info.plist";
 				INFOPLIST_KEY_NSCameraUsageDescription = "App would like to access camera to scan QR codes";
