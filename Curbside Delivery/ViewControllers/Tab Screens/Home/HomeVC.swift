@@ -74,9 +74,10 @@ class HomeVC: BaseViewController{
         self.tblOrders.register(nib, forCellReuseIdentifier: pendingOrderCell.className)
         let nib1 = UINib(nibName: completeOrderCell.className, bundle: nil)
         self.tblOrders.register(nib1, forCellReuseIdentifier: completeOrderCell.className)
-        
         let nib2 = UINib(nibName: HomeShimmerCell.className, bundle: nil)
         self.tblOrders.register(nib2, forCellReuseIdentifier: HomeShimmerCell.className)
+        let nib3 = UINib(nibName: NoDataTableViewCell.className, bundle: nil)
+        self.tblOrders.register(nib3, forCellReuseIdentifier: NoDataTableViewCell.className)
     }
     
     func addRefreshControl(){

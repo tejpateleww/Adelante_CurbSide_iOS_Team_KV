@@ -12,8 +12,8 @@ typealias NetworkRouterCompletion = ((Data?,[String:Any]?, Bool) -> ())
 
 enum APIEnvironment : String {
     
-    case Development = "http://3.239.174.164/api/Delivery/"
-    case ProfileBasrURL = "http://3.239.174.164/"
+    case Development = "http://18.215.15.214/api/Delivery/"
+    case ProfileBasrURL = "http://18.215.15.214/"
     case Live = "not provided"
     
     static var baseURL: String{

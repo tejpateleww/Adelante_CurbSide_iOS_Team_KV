@@ -65,9 +65,11 @@ class NotificaitonVC: BaseViewController {
     func registerNib(){
         let nib = UINib(nibName: NotificationCell.className, bundle: nil)
         self.tblNotification.register(nib, forCellReuseIdentifier: NotificationCell.className)
-        
         let nib2 = UINib(nibName: NotiShimmerCell.className, bundle: nil)
         self.tblNotification.register(nib2, forCellReuseIdentifier: NotiShimmerCell.className)
+        let nib3 = UINib(nibName: NoDataTableViewCell.className, bundle: nil)
+        self.tblNotification.register(nib3, forCellReuseIdentifier: NoDataTableViewCell.className)
+        
     }
     
     func addRefreshControl(){
