@@ -13,15 +13,15 @@ typealias NetworkRouterCompletion = ((Data?,[String:Any]?, Bool) -> ())
 enum APIEnvironment : String {
     
     case Development = "http://18.215.15.214/api/Delivery/"
-    case ProfileBasrURL = "http://18.215.15.214/"
-    case Live = "not provided"
+    case ProfileBasrURL = "http://18.208.18.170/"
+    case Live = "http://18.208.18.170/api/Delivery/"
     
     static var baseURL: String{
         return APIEnvironment.environment.rawValue
     }
     
     static var environment: APIEnvironment{
-        return .Development
+        return .Live
     }
     
     static var headers : [String:String]{
