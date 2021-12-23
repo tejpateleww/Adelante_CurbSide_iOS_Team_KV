@@ -2,18 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>App Would like to Access Your  location to assign orders</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>App Would like to Access Your  location to assign orders</string>
-	<key>NSLocationUsageDescription</key>
-	<string>App Would like to Access Your  location to assign orders</string>
-	<key>UIUserInterfaceStyle</key>
-	<string>Light</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>App Would like to Access Your  Photo Library to Take Photos</string>
-	<key>NSCameraUsageDescription</key>
-	<string>App Would like to Access Your  Camera to Take Photos</string>
+	<key>UISupportedInterfaceOrientations~iphone</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

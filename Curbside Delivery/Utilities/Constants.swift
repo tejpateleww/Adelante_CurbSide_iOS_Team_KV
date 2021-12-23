@@ -26,7 +26,7 @@ let NotificationBadges = NSNotification.Name(rawValue: "NotificationBadges")
 enum UserDefaultsKey : String {
     case userProfile = "userProfile"
     case isUserLogin = "isUserLogin"
-    case X_API_KEY = "X_API_KEY"
+    case X_API_KEY   = "X_API_KEY"
     case DeviceToken = "DeviceToken"
     case selLanguage = "language"
     case PlaceName = "PlaceName"

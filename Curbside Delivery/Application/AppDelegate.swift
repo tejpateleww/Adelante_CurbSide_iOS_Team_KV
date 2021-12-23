@@ -25,8 +25,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
     var window:UIWindow?
     var offlineStatue : Bool = false
     var locationService = LocationService()
+    weak var customTabBarController: CustomTabBarVC?
     static var pushNotificationObj : NotificationObjectModel?
     static var pushNotificationType : String?
+    
+    var visibleViewController: UIViewController? {
+        guard let rootViewController = window?.rootViewController else {
+            return nil
+        }
+        return UIApplication.getVisibleViewController(rootViewController)
+    }
     
     //MARK: - Life cycle methods
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -113,7 +121,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
     }
     
     func hideOfflineVC(){
-        UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: true, completion: nil)
+        UIApplication.shared.keyWindow?.rootViewController?.dismiss(animated: true, completion: {
+            let topVC = UIApplication.appTopViewController()
+            if (topVC?.isKind(of: SplashVC.self) ?? false){
+                NotificationCenter.default.post(name: .callInit, object: nil)
+            }
+        })
     }
     
 }
@@ -132,5 +145,22 @@ extension UIApplication {
             return appTopViewController(controller: presented)
         }
         return controller
+    }
+    
+    class func getVisibleViewController(_ rootViewController: UIViewController) -> UIViewController? {
+
+        if let presentedViewController = rootViewController.presentedViewController {
+            return getVisibleViewController(presentedViewController)
+        }
+
+        if let navigationController = rootViewController as? UINavigationController {
+            return navigationController.visibleViewController
+        }
+
+        if let tabBarController = rootViewController as? UITabBarController {
+            return tabBarController.selectedViewController
+        }
+
+        return rootViewController
     }
 }

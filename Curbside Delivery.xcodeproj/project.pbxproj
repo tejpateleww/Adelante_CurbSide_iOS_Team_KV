@@ -1515,7 +1515,11 @@
 				DEVELOPMENT_TEAM = 47RU9D4XHG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Curbside Delivery/Info.plist";
-				INFOPLIST_KEY_NSCameraUsageDescription = "App would like to access camera to scan QR codes";
+				INFOPLIST_KEY_NSCameraUsageDescription = "App Would like to Access Your  Camera to Take Photos";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "App Would like to Access Your  location to assign orders";
+				INFOPLIST_KEY_NSLocationUsageDescription = "App Would like to Access Your  location to assign orders";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App Would like to Access Your  location to assign orders";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "App Would like to Access Your  Photo Library to Take Photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
@@ -1550,7 +1554,11 @@
 				DEVELOPMENT_TEAM = 47RU9D4XHG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Curbside Delivery/Info.plist";
-				INFOPLIST_KEY_NSCameraUsageDescription = "App would like to access camera to scan QR codes";
+				INFOPLIST_KEY_NSCameraUsageDescription = "App Would like to Access Your  Camera to Take Photos";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "App Would like to Access Your  location to assign orders";
+				INFOPLIST_KEY_NSLocationUsageDescription = "App Would like to Access Your  location to assign orders";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App Would like to Access Your  location to assign orders";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "App Would like to Access Your  Photo Library to Take Photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Auth;

@@ -50,6 +50,7 @@ class ProfileVC: BaseViewController {
         self.customTabBarController?.showTabBar()
     }
     
+    
     func setupUI(){
         
         self.imagePicker.delegate = self

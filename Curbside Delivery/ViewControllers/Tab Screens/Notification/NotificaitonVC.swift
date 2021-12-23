@@ -164,6 +164,7 @@ extension NotificaitonVC : UITableViewDelegate, UITableViewDataSource{
             self.callDeleteNotiApi(Id: self.arrNotification[indexPath.row].id ?? "")
         }
     }
+
 }
 
 

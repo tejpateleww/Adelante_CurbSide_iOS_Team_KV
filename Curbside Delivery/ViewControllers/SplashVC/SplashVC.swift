@@ -10,7 +10,13 @@ import CoreLocation
 
 class SplashVC: BaseViewController {
     
+    //MARK: - Properties
+    
     //MARK: - Life-Cycle methods
+    override func viewWillAppear(_ animated: Bool) {
+        self.addNotificationObs()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
@@ -37,6 +43,16 @@ class SplashVC: BaseViewController {
         }else{
             AppDelegate.current.navigateToLogin()
         }
+    }
+    
+    //MARK: - Custom methods
+    func addNotificationObs(){
+        NotificationCenter.default.removeObserver(self, name: .callInit, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.callInitAPI), name: .callInit, object: nil)
+    }
+    
+    @objc func callInitAPI(){
+        self.webserviceInit()
     }
 }
 

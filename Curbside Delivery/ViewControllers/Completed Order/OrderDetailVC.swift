@@ -149,8 +149,8 @@ class OrderDetailVC: BaseViewController {
     
     func setupData(){
         self.lblName.text = self.orderDetail?.username ?? ""
-        self.lblParkingNumber.text = self.orderDetail?.parkingno ?? ""
-        self.lblCarNumber.text = self.orderDetail?.carnumber ?? ""
+        self.lblParkingNumber.text = self.orderDetail?.parkingno ?? "-"
+        self.lblCarNumber.text = self.orderDetail?.carnumber ?? "-"
         self.lblOrderID.text = "Order Id : \(self.orderDetail?.orderId ?? "")"
         self.lblTotalItems.text = "\(self.orderDetail?.item?.count ?? 0) Items"
         self.lblTotal.text = "\(CurrencySymbol)\(self.orderDetail?.total ?? "")"

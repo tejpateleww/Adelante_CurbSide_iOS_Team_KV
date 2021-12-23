@@ -20,10 +20,10 @@ class HomeVC: BaseViewController{
     var arrorders : [OrderListDatum] = []
     var isOrderCancelled : Bool = false
     
-    // Pull to refresh
+    //Pull to refresh
     let refreshControl = UIRefreshControl()
     
-    //shimmer
+    //Shimmer
     var isTblReload = false
     var isLoading = true {
         didSet {
@@ -52,6 +52,7 @@ class HomeVC: BaseViewController{
     }
     
     func setupUI(){
+        
         self.addNavBarImage(isLeft: true, isRight: true)
         self.setNavigationBarInViewController(controller: self, naviColor: colors.appOrangeColor.value, naviTitle: NavTitles.orders.value, leftImage: NavItemsLeft.none.value, rightImages: [NavItemsRight.none.value], isTranslucent: true, isShowHomeTopBar: false)
         
@@ -90,6 +91,9 @@ class HomeVC: BaseViewController{
     
     func addNotificationObs(){
         NotificationCenter.default.addObserver(self, selector: #selector(self.ReloadData), name: Notification.Name("ReloadData"), object: nil)
+        
+        NotificationCenter.default.removeObserver(self, name: .orderPrepare, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.newOrder), name: .orderPrepare, object: nil)
     }
     
     @objc func refresh(_ sender: AnyObject) {
@@ -110,6 +114,17 @@ class HomeVC: BaseViewController{
         self.callOrderListApi(orderType: OrderType.complete.rawValue)
     }
     
+    @objc func newOrder() {
+        self.segment.setIndex(0)
+        self.selectedSegmentTag = 0
+        
+        self.arrorders = []
+        self.isTblReload = false
+        self.isLoading = true
+        
+        self.callOrderListApi(orderType: OrderType.upcoming.rawValue)
+    }
+    
     func showTabbar(){
         self.customTabBarController = (self.tabBarController as! CustomTabBarVC)
         self.customTabBarController?.showTabBar()
@@ -125,7 +140,7 @@ class HomeVC: BaseViewController{
     
     //MARK: - @objc methods
     @objc func navigationSegmentedControlValueChanged(_ sender: BetterSegmentedControl) {
-        // to start shimmer again
+        //to start shimmer again
         self.arrorders = []
         self.isTblReload = false
         self.isLoading = true
@@ -150,8 +165,8 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource{
         } else {
             return (!self.isTblReload) ? 10 : 1
         }
-    } //AHMPP6805H 08-12-1968
-    
+    }
+        
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tblOrders.dequeueReusableCell(withIdentifier: HomeShimmerCell.className) as! HomeShimmerCell
@@ -255,7 +270,6 @@ extension HomeVC{
         
         let reqModel = OrderListReqModel()
         reqModel.type = orderType
-        
         self.homeListViewModel.webserviceLogin(reqModel: reqModel)
     }
     
@@ -265,7 +279,6 @@ extension HomeVC{
         let reqModel = OrderDetailReqModel()
         reqModel.type = strOrderType
         reqModel.orderId = strOrderId
-        
         self.homeListViewModel.webserviceOrderetail(reqModel: reqModel)
     }
 }
