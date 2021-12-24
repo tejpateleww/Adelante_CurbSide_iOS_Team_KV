@@ -189,7 +189,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource{
                     
                     cell.lblName.text = self.arrorders[indexPath.row].username ?? ""
                     cell.lblOrderId.text = "Order Id : \(self.arrorders[indexPath.row].id ?? "")"
-                    cell.lblOrderAmount.text = "\(CurrencySymbol)\(self.arrorders[indexPath.row].total ?? "")"
+                    cell.lblOrderAmount.text = "\( CurrencySymbol)\(self.arrorders[indexPath.row].total ?? "")"
                     cell.lblCarNumber.text = self.arrorders[indexPath.row].carNumber ?? ""
                     cell.lblParkingNumber.text = self.arrorders[indexPath.row].parkingNo ?? ""
                     
@@ -206,7 +206,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource{
                     
                     if(self.arrorders[indexPath.row].status == "5"){
                         cell.vWOrderStatus.backgroundColor = UIColor(hexString: "E91B3E")
-                        cell.lblOrderStatus.text = "Order canceled"
+                        cell.lblOrderStatus.text = "Order Canceled"
                     }else{
                         cell.vWOrderStatus.backgroundColor = UIColor(hexString: "209413")
                         cell.lblOrderStatus.text = "Order Delivered"

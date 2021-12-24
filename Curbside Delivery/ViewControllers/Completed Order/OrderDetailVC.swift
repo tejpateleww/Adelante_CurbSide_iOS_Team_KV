@@ -44,6 +44,10 @@ class OrderDetailVC: BaseViewController {
     @IBOutlet weak var stackDeliverHeight: NSLayoutConstraint!
     @IBOutlet weak var scrollVw: UIScrollView!
     
+    @IBOutlet weak var stackParking: UIStackView!
+    @IBOutlet weak var stackCar: UIStackView!
+    
+    
     var customTabBarController: CustomTabBarVC?
     var isFromScanCode : Bool = false
     var isFromCanceledOrder : Bool = false
@@ -160,6 +164,10 @@ class OrderDetailVC: BaseViewController {
         
         self.arrItem = self.orderDetail?.item ?? []
         self.tblItems.reloadData()
+        
+        if(self.lblCarNumber.text == "-"){
+            self.stackCar.isHidden = true
+        }
     }
     
     func registerNib(){
