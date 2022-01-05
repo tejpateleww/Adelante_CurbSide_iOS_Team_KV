@@ -171,7 +171,7 @@ class floatTextField: SkyFloatingLabelTextField {
 //
 //        self.textColor = colors.black.value
 //        self.titleFormatter = { $0 }
-        self.titleColor = colors.forgotpassGreyColor.value
+        self.titleColor = colors.black.value
         self.lineHeight = 0.0
         self.selectedLineHeight = 0.0
         self.selectedTitleColor = colors.forgotpassGreyColor.value
@@ -190,6 +190,7 @@ class floatTextField: SkyFloatingLabelTextField {
         if isEditProfile {
             self.titleFont = FontBook.bold.font(ofSize: 18)
             self.font = FontBook.regular.font(ofSize: 16)
+            self.tintColor = UIColor.black
         }
     }
 }

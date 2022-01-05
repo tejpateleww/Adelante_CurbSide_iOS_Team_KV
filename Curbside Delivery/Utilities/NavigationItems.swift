@@ -48,7 +48,7 @@ enum NavItemsRight {
 }
 
 enum NavTitles {
-    case none, orders, scanQR, notifications, CompleteOrderDetails, CanceledOrderDetails, OrderDetails, myProfile, ForgotPassword
+    case none, orders, scanQR, notifications, CompleteOrderDetails, CanceledOrderDetails, OrderDetails, myProfile, editProfile, ForgotPassword
     
     var value:String {
         switch self {
@@ -61,6 +61,8 @@ enum NavTitles {
             return "Scan QR Code"
         case .myProfile:
             return "My Profile"
+        case .editProfile:
+            return "Edit Profile"
         case .notifications:
             return "Notifications"
         case .CompleteOrderDetails:

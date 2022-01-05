@@ -37,7 +37,7 @@ class ThemeLabel: UILabel {
             return self.fonttype.rawValue
         }
         set(weightIndex) {
-            self.fonttype = Curbside_Delivery.FontWeight(rawValue: weightIndex) ?? .regular
+            self.fonttype = Curbside_Pickup.FontWeight(rawValue: weightIndex) ?? .regular
         }
     }
 

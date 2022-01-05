@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-let AppName = Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String ?? "Curbside Delivery"
+let AppName = Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String ?? "Curbside Pickup"
 let AppURL = "https://apps.apple.com/us/app/virtuwoof/id1488928328"
 let kAPPVesion = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as! String
 

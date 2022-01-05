@@ -13,7 +13,7 @@
         <!--Custom Tab BarVC-->
         <scene sceneID="Nmt-kb-OnO">
             <objects>
-                <tabBarController storyboardIdentifier="CustomTabBarVC" id="djo-J6-4v5" customClass="CustomTabBarVC" customModule="Curbside_Delivery" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="CustomTabBarVC" id="djo-J6-4v5" customClass="CustomTabBarVC" customModule="Curbside_Pickup" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionIndicatorImage="tabBg" id="Sj7-zF-Sfg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -52,7 +52,7 @@
         <!--HomeVC-->
         <scene sceneID="VXW-tO-a7P">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Yd0-nc-EbJ" customClass="HomeVC" customModule="Curbside_Delivery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Yd0-nc-EbJ" customClass="HomeVC" customModule="Curbside_Pickup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Qp-7h-SyQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,7 +60,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yZk-Ny-IK0">
                                 <rect key="frame" x="0.0" y="49" width="414" height="50"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="knC-wl-eUn" customClass="myOrdersSegmentControl" customModule="Curbside_Delivery" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="knC-wl-eUn" customClass="myOrdersSegmentControl" customModule="Curbside_Pickup" customModuleProvider="target">
                                         <rect key="frame" x="18" y="0.0" width="378" height="50"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <userDefinedRuntimeAttributes>
@@ -109,7 +109,7 @@
         <!--OfflineVC-->
         <scene sceneID="AY3-4L-mg8">
             <objects>
-                <viewController storyboardIdentifier="OfflineVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="y5t-XY-Hac" customClass="OfflineVC" customModule="Curbside_Delivery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OfflineVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="y5t-XY-Hac" customClass="OfflineVC" customModule="Curbside_Pickup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7fz-EJ-WYE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -120,7 +120,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jc8-3f-yW4" customClass="submitButton" customModule="Curbside_Delivery" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jc8-3f-yW4" customClass="submitButton" customModule="Curbside_Pickup" customModuleProvider="target">
                                 <rect key="frame" x="41.5" y="518.5" width="331" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="XoL-bg-eY6"/>
@@ -229,7 +229,7 @@
         <!--NotificaitonVC-->
         <scene sceneID="Gjo-2W-IZX">
             <objects>
-                <viewController storyboardIdentifier="NotificaitonVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JR5-vI-30S" customClass="NotificaitonVC" customModule="Curbside_Delivery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotificaitonVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JR5-vI-30S" customClass="NotificaitonVC" customModule="Curbside_Pickup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oA3-2q-fm1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -260,7 +260,7 @@
         <!--ProfileVC-->
         <scene sceneID="qbd-6W-geH">
             <objects>
-                <viewController storyboardIdentifier="ProfileVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="brr-pY-Azb" customClass="ProfileVC" customModule="Curbside_Delivery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="brr-pY-Azb" customClass="ProfileVC" customModule="Curbside_Pickup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PGV-y3-f3F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -310,20 +310,20 @@
                                                     <action selector="btnUploadImgAction:" destination="brr-pY-Azb" eventType="touchUpInside" id="PCQ-31-n8A"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Smith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPQ-kt-HbU" customClass="themeLabel" customModule="Curbside_Delivery" customModuleProvider="target">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Smith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPQ-kt-HbU" customClass="themeLabel" customModule="Curbside_Pickup" customModuleProvider="target">
                                                 <rect key="frame" x="164" y="140" width="86" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shg-gO-1dg" customClass="submitButton" customModule="Curbside_Delivery" customModuleProvider="target">
-                                                <rect key="frame" x="154" y="168" width="106.5" height="40"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shg-gO-1dg" customClass="submitButton" customModule="Curbside_Pickup" customModuleProvider="target">
+                                                <rect key="frame" x="143.5" y="168" width="127" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="WwG-e8-hHK"/>
                                                 </constraints>
                                                 <color key="tintColor" name="ThemeOrange"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Edit Account"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="EDIT ACCOUNT"/>
                                                 <connections>
                                                     <action selector="BtnEditAccount:" destination="brr-pY-Azb" eventType="touchUpInside" id="rtB-YI-dwn"/>
                                                 </connections>
@@ -344,7 +344,7 @@
                                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="TvJ-1v-yIs">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="63"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="47B-le-Hhd" customClass="floatTextField" customModule="Curbside_Delivery" customModuleProvider="target">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="47B-le-Hhd" customClass="floatTextField" customModule="Curbside_Pickup" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="47"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="47" id="syS-hp-58w"/>
@@ -354,14 +354,14 @@
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email Id"/>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                         <connections>
                                                                             <outlet property="delegate" destination="brr-pY-Azb" id="26z-Lg-Oph"/>
                                                                         </connections>
                                                                     </textField>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9E6-Dl-iVG" customClass="seperatorView" customModule="Curbside_Delivery" customModuleProvider="target">
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9E6-Dl-iVG" customClass="seperatorView" customModule="Curbside_Pickup" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="62" width="374" height="1"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
@@ -388,7 +388,7 @@
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AAK-MA-N3V">
                                                                         <rect key="frame" x="0.0" y="0.0" width="374" height="47"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cU2-75-CwY" customClass="floatTextField" customModule="Curbside_Delivery" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cU2-75-CwY" customClass="floatTextField" customModule="Curbside_Pickup" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="47"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="47" id="ddE-Rf-IVo"/>
@@ -397,6 +397,9 @@
                                                                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                                                                                 <userDefinedRuntimeAttributes>
                                                                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Phone Number"/>
+                                                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    </userDefinedRuntimeAttribute>
                                                                                 </userDefinedRuntimeAttributes>
                                                                                 <connections>
                                                                                     <outlet property="delegate" destination="brr-pY-Azb" id="ahO-lK-2CO"/>
@@ -411,7 +414,7 @@
                                                                             <constraint firstAttribute="bottom" secondItem="cU2-75-CwY" secondAttribute="bottom" id="eug-Ac-CiV"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIV-eE-kcn" customClass="seperatorView" customModule="Curbside_Delivery" customModuleProvider="target">
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIV-eE-kcn" customClass="seperatorView" customModule="Curbside_Pickup" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="62" width="374" height="1"/>
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <constraints>
@@ -431,7 +434,7 @@
                                                     </view>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpf-ad-tTi" customClass="submitButton" customModule="Curbside_Delivery" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpf-ad-tTi" customClass="submitButton" customModule="Curbside_Pickup" customModuleProvider="target">
                                                 <rect key="frame" x="30" y="665" width="354" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="fC8-om-5JK"/>
@@ -515,7 +518,7 @@
         <!--ScanQ RcodeVC-->
         <scene sceneID="PfX-VT-sSK">
             <objects>
-                <viewController storyboardIdentifier="ScanQRcodeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f8b-tG-yng" customClass="ScanQRcodeVC" customModule="Curbside_Delivery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScanQRcodeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="f8b-tG-yng" customClass="ScanQRcodeVC" customModule="Curbside_Pickup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pOS-D8-O7D">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -523,7 +526,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPM-Jv-gKc">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0J-8Q-NTt" customClass="QRScannerView" customModule="Curbside_Delivery" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e0J-8Q-NTt" customClass="QRScannerView" customModule="Curbside_Pickup" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="codeScanBackground" translatesAutoresizingMaskIntoConstraints="NO" id="qcc-lK-Nsz">
@@ -572,7 +575,7 @@
         <!--Deliver Success Pop UpVC-->
         <scene sceneID="gqa-JF-Ft4">
             <objects>
-                <viewController storyboardIdentifier="DeliverSuccessPopUpVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CUx-nN-nbu" customClass="DeliverSuccessPopUpVC" customModule="Curbside_Delivery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DeliverSuccessPopUpVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CUx-nN-nbu" customClass="DeliverSuccessPopUpVC" customModule="Curbside_Pickup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ToH-1k-Ueb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -596,7 +599,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0E-JV-aRL" customClass="submitButton" customModule="Curbside_Delivery" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0E-JV-aRL" customClass="submitButton" customModule="Curbside_Pickup" customModuleProvider="target">
                                         <rect key="frame" x="82.5" y="261" width="166" height="50"/>
                                         <color key="backgroundColor" name="ThemeGreen"/>
                                         <constraints>
@@ -667,7 +670,7 @@
         <!--Order DetailVC-->
         <scene sceneID="CsX-q0-xL2">
             <objects>
-                <viewController storyboardIdentifier="OrderDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hmO-co-rfJ" customClass="OrderDetailVC" customModule="Curbside_Delivery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hmO-co-rfJ" customClass="OrderDetailVC" customModule="Curbside_Pickup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DVk-ba-gHb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -868,7 +871,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YWU-DK-3BX">
                                                 <rect key="frame" x="41.5" y="719.5" width="331" height="50"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEg-Le-Mjk" customClass="submitButton" customModule="Curbside_Delivery" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEg-Le-Mjk" customClass="submitButton" customModule="Curbside_Pickup" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="331" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="kEe-Vf-Ujv"/>
@@ -1060,6 +1063,7 @@
         <designable name="cU2-75-CwY">
             <size key="intrinsicContentSize" width="374" height="39.220703125"/>
         </designable>
+        <designable name="kUL-tJ-ZkI"/>
         <designable name="knC-wl-eUn">
             <size key="intrinsicContentSize" width="195" height="32"/>
         </designable>

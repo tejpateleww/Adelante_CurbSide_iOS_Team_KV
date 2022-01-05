@@ -216,11 +216,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource{
                 
             }else{
                 let NoDatacell = self.tblOrders.dequeueReusableCell(withIdentifier: "NoDataTableViewCell", for: indexPath) as! NoDataTableViewCell
-                if(self.selectedSegmentTag == 0){
-                    NoDatacell.lblNoDataTitle.text = "Pending orders not found."
-                }else{
-                    NoDatacell.lblNoDataTitle.text = "Completed orders not found."
-                }
+                NoDatacell.lblNoDataTitle.text = "No order found"
                 return NoDatacell
             }
         }

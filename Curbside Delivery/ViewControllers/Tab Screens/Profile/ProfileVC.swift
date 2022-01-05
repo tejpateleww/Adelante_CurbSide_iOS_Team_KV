@@ -66,7 +66,6 @@ class ProfileVC: BaseViewController {
         
         self.customTabBarController?.showTabBar()
         self.addNavBarImage(isLeft: true, isRight: true)
-        self.setNavigationBarInViewController(controller: self, naviColor: colors.appOrangeColor.value, naviTitle: NavTitles.myProfile.value, leftImage: NavItemsLeft.none.value, rightImages: [NavItemsRight.logout.value], isTranslucent: true, isShowHomeTopBar: false)
     }
     
     func setupData(){
@@ -90,6 +89,7 @@ class ProfileVC: BaseViewController {
     }
     
     func disableData(){
+        self.setNavigationBarInViewController(controller: self, naviColor: colors.appOrangeColor.value, naviTitle: NavTitles.myProfile.value, leftImage: NavItemsLeft.none.value, rightImages: [NavItemsRight.logout.value], isTranslucent: true, isShowHomeTopBar: false)
         self.txtEmail.isUserInteractionEnabled = false
         self.txtPhoneNumber.isUserInteractionEnabled = false
         self.btnSave.isHidden = true
@@ -98,6 +98,7 @@ class ProfileVC: BaseViewController {
     }
     
     func enableData(){
+        self.setNavigationBarInViewController(controller: self, naviColor: colors.appOrangeColor.value, naviTitle: NavTitles.editProfile.value, leftImage: NavItemsLeft.none.value, rightImages: [NavItemsRight.logout.value], isTranslucent: true, isShowHomeTopBar: false)
         self.btnSave.isHidden = false
         self.iconProfile.isHidden = false
         self.btnEditAccount.isHidden = true

@@ -201,15 +201,15 @@
 		88708E01274CE3FF00C9D6C1 /* QRCodeResItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeResItem.swift; sourceTree = "<group>"; };
 		88708E05274CE51200C9D6C1 /* QRCodeReqModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReqModel.swift; sourceTree = "<group>"; };
 		88708E08274CE5B400C9D6C1 /* ScanQRUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRUserModel.swift; sourceTree = "<group>"; };
-		887B6C07272FA97A00CBAEEF /* Curbside Delivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Curbside Delivery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		887B6C07272FA97A00CBAEEF /* Curbside Pickup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Curbside Pickup.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		887B6C0A272FA97A00CBAEEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		887B6C11272FA97A00CBAEEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		887B6C13272FA97C00CBAEEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		887B6C16272FA97C00CBAEEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		887B6C18272FA97C00CBAEEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		887B6C1D272FA97D00CBAEEF /* Curbside DeliveryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Curbside DeliveryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		887B6C1D272FA97D00CBAEEF /* Curbside PickupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Curbside PickupTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		887B6C21272FA97D00CBAEEF /* Curbside_DeliveryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curbside_DeliveryTests.swift; sourceTree = "<group>"; };
-		887B6C27272FA97D00CBAEEF /* Curbside DeliveryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Curbside DeliveryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		887B6C27272FA97D00CBAEEF /* Curbside PickupUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Curbside PickupUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		887B6C2B272FA97D00CBAEEF /* Curbside_DeliveryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curbside_DeliveryUITests.swift; sourceTree = "<group>"; };
 		887B6C2D272FA97D00CBAEEF /* Curbside_DeliveryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curbside_DeliveryUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		887B6C98272FB57F00CBAEEF /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
@@ -523,9 +523,9 @@
 		887B6C08272FA97A00CBAEEF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				887B6C07272FA97A00CBAEEF /* Curbside Delivery.app */,
-				887B6C1D272FA97D00CBAEEF /* Curbside DeliveryTests.xctest */,
-				887B6C27272FA97D00CBAEEF /* Curbside DeliveryUITests.xctest */,
+				887B6C07272FA97A00CBAEEF /* Curbside Pickup.app */,
+				887B6C1D272FA97D00CBAEEF /* Curbside PickupTests.xctest */,
+				887B6C27272FA97D00CBAEEF /* Curbside PickupUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -962,9 +962,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		887B6C06272FA97A00CBAEEF /* Curbside Delivery */ = {
+		887B6C06272FA97A00CBAEEF /* Curbside Pickup */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 887B6C31272FA97D00CBAEEF /* Build configuration list for PBXNativeTarget "Curbside Delivery" */;
+			buildConfigurationList = 887B6C31272FA97D00CBAEEF /* Build configuration list for PBXNativeTarget "Curbside Pickup" */;
 			buildPhases = (
 				2DFB6462F18D3185FC941F46 /* [CP] Check Pods Manifest.lock */,
 				887B6C03272FA97A00CBAEEF /* Sources */,
@@ -977,14 +977,14 @@
 			);
 			dependencies = (
 			);
-			name = "Curbside Delivery";
+			name = "Curbside Pickup";
 			productName = "Curbside Delivery";
-			productReference = 887B6C07272FA97A00CBAEEF /* Curbside Delivery.app */;
+			productReference = 887B6C07272FA97A00CBAEEF /* Curbside Pickup.app */;
 			productType = "com.apple.product-type.application";
 		};
-		887B6C1C272FA97D00CBAEEF /* Curbside DeliveryTests */ = {
+		887B6C1C272FA97D00CBAEEF /* Curbside PickupTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 887B6C34272FA97D00CBAEEF /* Build configuration list for PBXNativeTarget "Curbside DeliveryTests" */;
+			buildConfigurationList = 887B6C34272FA97D00CBAEEF /* Build configuration list for PBXNativeTarget "Curbside PickupTests" */;
 			buildPhases = (
 				FAADD469B3A7306ED15E31B9 /* [CP] Check Pods Manifest.lock */,
 				887B6C19272FA97D00CBAEEF /* Sources */,
@@ -996,14 +996,14 @@
 			dependencies = (
 				887B6C1F272FA97D00CBAEEF /* PBXTargetDependency */,
 			);
-			name = "Curbside DeliveryTests";
+			name = "Curbside PickupTests";
 			productName = "Curbside DeliveryTests";
-			productReference = 887B6C1D272FA97D00CBAEEF /* Curbside DeliveryTests.xctest */;
+			productReference = 887B6C1D272FA97D00CBAEEF /* Curbside PickupTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		887B6C26272FA97D00CBAEEF /* Curbside DeliveryUITests */ = {
+		887B6C26272FA97D00CBAEEF /* Curbside PickupUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 887B6C37272FA97D00CBAEEF /* Build configuration list for PBXNativeTarget "Curbside DeliveryUITests" */;
+			buildConfigurationList = 887B6C37272FA97D00CBAEEF /* Build configuration list for PBXNativeTarget "Curbside PickupUITests" */;
 			buildPhases = (
 				7680FF0FCFDAB7D83CF75F22 /* [CP] Check Pods Manifest.lock */,
 				887B6C23272FA97D00CBAEEF /* Sources */,
@@ -1016,9 +1016,9 @@
 			dependencies = (
 				887B6C29272FA97D00CBAEEF /* PBXTargetDependency */,
 			);
-			name = "Curbside DeliveryUITests";
+			name = "Curbside PickupUITests";
 			productName = "Curbside DeliveryUITests";
-			productReference = 887B6C27272FA97D00CBAEEF /* Curbside DeliveryUITests.xctest */;
+			productReference = 887B6C27272FA97D00CBAEEF /* Curbside PickupUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -1044,7 +1044,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 887B6C02272FA97A00CBAEEF /* Build configuration list for PBXProject "Curbside Delivery" */;
+			buildConfigurationList = 887B6C02272FA97A00CBAEEF /* Build configuration list for PBXProject "Curbside Pickup" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1057,9 +1057,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				887B6C06272FA97A00CBAEEF /* Curbside Delivery */,
-				887B6C1C272FA97D00CBAEEF /* Curbside DeliveryTests */,
-				887B6C26272FA97D00CBAEEF /* Curbside DeliveryUITests */,
+				887B6C06272FA97A00CBAEEF /* Curbside Pickup */,
+				887B6C1C272FA97D00CBAEEF /* Curbside PickupTests */,
+				887B6C26272FA97D00CBAEEF /* Curbside PickupUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1356,12 +1356,12 @@
 /* Begin PBXTargetDependency section */
 		887B6C1F272FA97D00CBAEEF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 887B6C06272FA97A00CBAEEF /* Curbside Delivery */;
+			target = 887B6C06272FA97A00CBAEEF /* Curbside Pickup */;
 			targetProxy = 887B6C1E272FA97D00CBAEEF /* PBXContainerItemProxy */;
 		};
 		887B6C29272FA97D00CBAEEF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 887B6C06272FA97A00CBAEEF /* Curbside Delivery */;
+			target = 887B6C06272FA97A00CBAEEF /* Curbside Pickup */;
 			targetProxy = 887B6C28272FA97D00CBAEEF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1603,7 +1603,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Curbside Delivery.app/Curbside Delivery";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Curbside Pickup.app/Curbside Pickup";
 			};
 			name = Debug;
 		};
@@ -1629,7 +1629,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Curbside Delivery.app/Curbside Delivery";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Curbside Pickup.app/Curbside Pickup";
 			};
 			name = Release;
 		};
@@ -1684,7 +1684,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		887B6C02272FA97A00CBAEEF /* Build configuration list for PBXProject "Curbside Delivery" */ = {
+		887B6C02272FA97A00CBAEEF /* Build configuration list for PBXProject "Curbside Pickup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				887B6C2F272FA97D00CBAEEF /* Debug */,
@@ -1693,7 +1693,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		887B6C31272FA97D00CBAEEF /* Build configuration list for PBXNativeTarget "Curbside Delivery" */ = {
+		887B6C31272FA97D00CBAEEF /* Build configuration list for PBXNativeTarget "Curbside Pickup" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				887B6C32272FA97D00CBAEEF /* Debug */,
@@ -1702,7 +1702,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		887B6C34272FA97D00CBAEEF /* Build configuration list for PBXNativeTarget "Curbside DeliveryTests" */ = {
+		887B6C34272FA97D00CBAEEF /* Build configuration list for PBXNativeTarget "Curbside PickupTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				887B6C35272FA97D00CBAEEF /* Debug */,
@@ -1711,7 +1711,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		887B6C37272FA97D00CBAEEF /* Build configuration list for PBXNativeTarget "Curbside DeliveryUITests" */ = {
+		887B6C37272FA97D00CBAEEF /* Build configuration list for PBXNativeTarget "Curbside PickupUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				887B6C38272FA97D00CBAEEF /* Debug */,
