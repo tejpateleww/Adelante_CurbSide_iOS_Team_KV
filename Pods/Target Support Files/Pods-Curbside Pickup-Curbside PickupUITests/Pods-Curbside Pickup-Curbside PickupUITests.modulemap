@@ -1,0 +1,6 @@
+framework module Pods_Curbside_Pickup_Curbside_PickupUITests {
+  umbrella header "Pods-Curbside Pickup-Curbside PickupUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,6 +1,0 @@
-framework module Pods_Curbside_Delivery_Curbside_DeliveryUITests {
-  umbrella header "Pods-Curbside Delivery-Curbside DeliveryUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

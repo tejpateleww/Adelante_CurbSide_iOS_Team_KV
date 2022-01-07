@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B6C0898DB696FB7743079C8 /* Pods_Curbside_Delivery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823242C9403820D94DAC1956 /* Pods_Curbside_Delivery.framework */; };
-		6DE3BEF62220ED1C1A76D6B9 /* Pods_Curbside_Delivery_Curbside_DeliveryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8247AA49B22BBB7678CB038 /* Pods_Curbside_Delivery_Curbside_DeliveryUITests.framework */; };
+		2082136ED4B6FA5E734360C5 /* Pods_Curbside_Pickup_Curbside_PickupUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A624F28639624FAEECBC4C /* Pods_Curbside_Pickup_Curbside_PickupUITests.framework */; };
+		4AA64FF207774464D05D902C /* Pods_Curbside_PickupTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 988D340EA0A45FFDD8B221AA /* Pods_Curbside_PickupTests.framework */; };
+		70F02DB43D112905FA55B2D8 /* Pods_Curbside_Pickup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D77B2B2AA19950C0827915 /* Pods_Curbside_Pickup.framework */; };
 		881D7C57274E14E700B7A91D /* NotificationResDatum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D7C55274E14E700B7A91D /* NotificationResDatum.swift */; };
 		881D7C58274E14E700B7A91D /* NotificationResModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D7C56274E14E700B7A91D /* NotificationResModel.swift */; };
 		881D7C5A274E151700B7A91D /* NotificationReqModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881D7C59274E151700B7A91D /* NotificationReqModel.swift */; };
@@ -128,7 +129,6 @@
 		88F9DC942742803C00735D57 /* completeOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F9DC922742803C00735D57 /* completeOrderCell.swift */; };
 		88F9DC952742803C00735D57 /* completeOrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88F9DC932742803C00735D57 /* completeOrderCell.xib */; };
 		88F9DC972742814000735D57 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88F9DC962742814000735D57 /* Colors.xcassets */; };
-		BE1CD64B13F7579FB991B767 /* Pods_Curbside_DeliveryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 706672AB60A5E78A269F6661 /* Pods_Curbside_DeliveryTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,8 +150,11 @@
 
 /* Begin PBXFileReference section */
 		2DB3662E7B888E52D3FB9E3B /* Pods-Curbside Delivery-Curbside DeliveryUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curbside Delivery-Curbside DeliveryUITests.release.xcconfig"; path = "Target Support Files/Pods-Curbside Delivery-Curbside DeliveryUITests/Pods-Curbside Delivery-Curbside DeliveryUITests.release.xcconfig"; sourceTree = "<group>"; };
-		706672AB60A5E78A269F6661 /* Pods_Curbside_DeliveryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Curbside_DeliveryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		823242C9403820D94DAC1956 /* Pods_Curbside_Delivery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Curbside_Delivery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3619A0CFB23E0FB3A7A3D5B9 /* Pods-Curbside Pickup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curbside Pickup.debug.xcconfig"; path = "Target Support Files/Pods-Curbside Pickup/Pods-Curbside Pickup.debug.xcconfig"; sourceTree = "<group>"; };
+		448B9426FB9F6D7D274CDB21 /* Pods-Curbside Pickup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curbside Pickup.release.xcconfig"; path = "Target Support Files/Pods-Curbside Pickup/Pods-Curbside Pickup.release.xcconfig"; sourceTree = "<group>"; };
+		67A624F28639624FAEECBC4C /* Pods_Curbside_Pickup_Curbside_PickupUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Curbside_Pickup_Curbside_PickupUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A31B77C8BDB39907BB7DB58 /* Pods-Curbside Pickup-Curbside PickupUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curbside Pickup-Curbside PickupUITests.release.xcconfig"; path = "Target Support Files/Pods-Curbside Pickup-Curbside PickupUITests/Pods-Curbside Pickup-Curbside PickupUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7583633252C7BD5259D77DBB /* Pods-Curbside PickupTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curbside PickupTests.release.xcconfig"; path = "Target Support Files/Pods-Curbside PickupTests/Pods-Curbside PickupTests.release.xcconfig"; sourceTree = "<group>"; };
 		881D7C55274E14E700B7A91D /* NotificationResDatum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationResDatum.swift; sourceTree = "<group>"; };
 		881D7C56274E14E700B7A91D /* NotificationResModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationResModel.swift; sourceTree = "<group>"; };
 		881D7C59274E151700B7A91D /* NotificationReqModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationReqModel.swift; sourceTree = "<group>"; };
@@ -279,11 +282,14 @@
 		88F9DC932742803C00735D57 /* completeOrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = completeOrderCell.xib; sourceTree = "<group>"; };
 		88F9DC962742814000735D57 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		8961607E44C21D3C44E84CFC /* Pods-Curbside Delivery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curbside Delivery.release.xcconfig"; path = "Target Support Files/Pods-Curbside Delivery/Pods-Curbside Delivery.release.xcconfig"; sourceTree = "<group>"; };
+		988D340EA0A45FFDD8B221AA /* Pods_Curbside_PickupTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Curbside_PickupTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D3D18B38A0FCAB57937F6D0 /* Pods-Curbside Delivery-Curbside DeliveryUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curbside Delivery-Curbside DeliveryUITests.debug.xcconfig"; path = "Target Support Files/Pods-Curbside Delivery-Curbside DeliveryUITests/Pods-Curbside Delivery-Curbside DeliveryUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		9D5780FD252C27C7ACFC87F5 /* Pods-Curbside DeliveryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curbside DeliveryTests.debug.xcconfig"; path = "Target Support Files/Pods-Curbside DeliveryTests/Pods-Curbside DeliveryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A05F2EB4EF28A188CD62E303 /* Pods-Curbside PickupTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curbside PickupTests.debug.xcconfig"; path = "Target Support Files/Pods-Curbside PickupTests/Pods-Curbside PickupTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B4881A22755DD93FDD28BFD0 /* Pods-Curbside Delivery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curbside Delivery.debug.xcconfig"; path = "Target Support Files/Pods-Curbside Delivery/Pods-Curbside Delivery.debug.xcconfig"; sourceTree = "<group>"; };
+		DCE5C069857AB51BA7579A45 /* Pods-Curbside Pickup-Curbside PickupUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curbside Pickup-Curbside PickupUITests.debug.xcconfig"; path = "Target Support Files/Pods-Curbside Pickup-Curbside PickupUITests/Pods-Curbside Pickup-Curbside PickupUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DFE00F44957688A72D9FFF6B /* Pods-Curbside DeliveryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Curbside DeliveryTests.release.xcconfig"; path = "Target Support Files/Pods-Curbside DeliveryTests/Pods-Curbside DeliveryTests.release.xcconfig"; sourceTree = "<group>"; };
-		F8247AA49B22BBB7678CB038 /* Pods_Curbside_Delivery_Curbside_DeliveryUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Curbside_Delivery_Curbside_DeliveryUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D77B2B2AA19950C0827915 /* Pods_Curbside_Pickup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Curbside_Pickup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,7 +297,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B6C0898DB696FB7743079C8 /* Pods_Curbside_Delivery.framework in Frameworks */,
+				70F02DB43D112905FA55B2D8 /* Pods_Curbside_Pickup.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +305,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE1CD64B13F7579FB991B767 /* Pods_Curbside_DeliveryTests.framework in Frameworks */,
+				4AA64FF207774464D05D902C /* Pods_Curbside_PickupTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +313,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DE3BEF62220ED1C1A76D6B9 /* Pods_Curbside_Delivery_Curbside_DeliveryUITests.framework in Frameworks */,
+				2082136ED4B6FA5E734360C5 /* Pods_Curbside_Pickup_Curbside_PickupUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -939,9 +945,9 @@
 		F6603795E6F9B590302D37C1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				823242C9403820D94DAC1956 /* Pods_Curbside_Delivery.framework */,
-				F8247AA49B22BBB7678CB038 /* Pods_Curbside_Delivery_Curbside_DeliveryUITests.framework */,
-				706672AB60A5E78A269F6661 /* Pods_Curbside_DeliveryTests.framework */,
+				F3D77B2B2AA19950C0827915 /* Pods_Curbside_Pickup.framework */,
+				67A624F28639624FAEECBC4C /* Pods_Curbside_Pickup_Curbside_PickupUITests.framework */,
+				988D340EA0A45FFDD8B221AA /* Pods_Curbside_PickupTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -955,6 +961,12 @@
 				2DB3662E7B888E52D3FB9E3B /* Pods-Curbside Delivery-Curbside DeliveryUITests.release.xcconfig */,
 				9D5780FD252C27C7ACFC87F5 /* Pods-Curbside DeliveryTests.debug.xcconfig */,
 				DFE00F44957688A72D9FFF6B /* Pods-Curbside DeliveryTests.release.xcconfig */,
+				3619A0CFB23E0FB3A7A3D5B9 /* Pods-Curbside Pickup.debug.xcconfig */,
+				448B9426FB9F6D7D274CDB21 /* Pods-Curbside Pickup.release.xcconfig */,
+				DCE5C069857AB51BA7579A45 /* Pods-Curbside Pickup-Curbside PickupUITests.debug.xcconfig */,
+				6A31B77C8BDB39907BB7DB58 /* Pods-Curbside Pickup-Curbside PickupUITests.release.xcconfig */,
+				A05F2EB4EF28A188CD62E303 /* Pods-Curbside PickupTests.debug.xcconfig */,
+				7583633252C7BD5259D77DBB /* Pods-Curbside PickupTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1133,7 +1145,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Curbside Delivery-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Curbside Pickup-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1155,7 +1167,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Curbside Delivery-Curbside DeliveryUITests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Curbside Pickup-Curbside PickupUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1187,15 +1199,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Curbside Delivery-Curbside DeliveryUITests/Pods-Curbside Delivery-Curbside DeliveryUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Curbside Pickup-Curbside PickupUITests/Pods-Curbside Pickup-Curbside PickupUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Curbside Delivery-Curbside DeliveryUITests/Pods-Curbside Delivery-Curbside DeliveryUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Curbside Pickup-Curbside PickupUITests/Pods-Curbside Pickup-Curbside PickupUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Curbside Delivery-Curbside DeliveryUITests/Pods-Curbside Delivery-Curbside DeliveryUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Curbside Pickup-Curbside PickupUITests/Pods-Curbside Pickup-Curbside PickupUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F16903D139D244FFACC12422 /* [CP] Embed Pods Frameworks */ = {
@@ -1204,15 +1216,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Curbside Delivery/Pods-Curbside Delivery-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Curbside Pickup/Pods-Curbside Pickup-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Curbside Delivery/Pods-Curbside Delivery-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Curbside Pickup/Pods-Curbside Pickup-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Curbside Delivery/Pods-Curbside Delivery-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Curbside Pickup/Pods-Curbside Pickup-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FAADD469B3A7306ED15E31B9 /* [CP] Check Pods Manifest.lock */ = {
@@ -1230,7 +1242,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Curbside DeliveryTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Curbside PickupTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1504,7 +1516,7 @@
 		};
 		887B6C32272FA97D00CBAEEF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4881A22755DD93FDD28BFD0 /* Pods-Curbside Delivery.debug.xcconfig */;
+			baseConfigurationReference = 3619A0CFB23E0FB3A7A3D5B9 /* Pods-Curbside Pickup.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1544,7 +1556,7 @@
 		};
 		887B6C33272FA97D00CBAEEF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8961607E44C21D3C44E84CFC /* Pods-Curbside Delivery.release.xcconfig */;
+			baseConfigurationReference = 448B9426FB9F6D7D274CDB21 /* Pods-Curbside Pickup.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1583,7 +1595,7 @@
 		};
 		887B6C35272FA97D00CBAEEF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D5780FD252C27C7ACFC87F5 /* Pods-Curbside DeliveryTests.debug.xcconfig */;
+			baseConfigurationReference = A05F2EB4EF28A188CD62E303 /* Pods-Curbside PickupTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1609,7 +1621,7 @@
 		};
 		887B6C36272FA97D00CBAEEF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DFE00F44957688A72D9FFF6B /* Pods-Curbside DeliveryTests.release.xcconfig */;
+			baseConfigurationReference = 7583633252C7BD5259D77DBB /* Pods-Curbside PickupTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1635,7 +1647,7 @@
 		};
 		887B6C38272FA97D00CBAEEF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9D3D18B38A0FCAB57937F6D0 /* Pods-Curbside Delivery-Curbside DeliveryUITests.debug.xcconfig */;
+			baseConfigurationReference = DCE5C069857AB51BA7579A45 /* Pods-Curbside Pickup-Curbside PickupUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1659,7 +1671,7 @@
 		};
 		887B6C39272FA97D00CBAEEF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2DB3662E7B888E52D3FB9E3B /* Pods-Curbside Delivery-Curbside DeliveryUITests.release.xcconfig */;
+			baseConfigurationReference = 6A31B77C8BDB39907BB7DB58 /* Pods-Curbside Pickup-Curbside PickupUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

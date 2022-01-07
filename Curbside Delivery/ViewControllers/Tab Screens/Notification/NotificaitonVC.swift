@@ -59,7 +59,6 @@ class NotificaitonVC: BaseViewController {
         self.tblNotification.dataSource = self
         self.tblNotification.separatorStyle = .none
         self.tblNotification.showsVerticalScrollIndicator = false
-        
     }
     
     func registerNib(){
@@ -69,7 +68,6 @@ class NotificaitonVC: BaseViewController {
         self.tblNotification.register(nib2, forCellReuseIdentifier: NotiShimmerCell.className)
         let nib3 = UINib(nibName: NoDataTableViewCell.className, bundle: nil)
         self.tblNotification.register(nib3, forCellReuseIdentifier: NoDataTableViewCell.className)
-        
     }
     
     func addRefreshControl(){
@@ -79,7 +77,6 @@ class NotificaitonVC: BaseViewController {
         self.refreshControl.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
         self.tblNotification.addSubview(self.refreshControl)
     }
-    
     
     @objc func refresh(_ sender: AnyObject) {
         self.arrNotification = []
@@ -123,7 +120,7 @@ extension NotificaitonVC : UITableViewDelegate, UITableViewDataSource{
                 if(cell.lblNotiDesc.text == StringConsts.NotiSessionExpired){
                     cell.imgNoti.image = UIImage(named: "iconNotificationInfo")
                 }else{
-                    cell.imgNoti.image = UIImage(named: "iconNotiSuccess")//iconNotiFail
+                    cell.imgNoti.image = UIImage(named: "iconNotiSuccess")
                 }
                 return cell
             }else{

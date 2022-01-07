@@ -1,11 +1,11 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'Curbside Delivery' do
+target 'Curbside Pickup' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for Curbside Delivery
+  # Pods for Curbside Pickup
 
 pod 'Alamofire', '~> 5.0.0'
 pod 'IQKeyboardManagerSwift'
@@ -23,12 +23,12 @@ pod 'Firebase/Messaging'
 pod 'Firebase/Crashlytics'
 
 
-  target 'Curbside DeliveryTests' do
+  target 'Curbside PickupTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'Curbside DeliveryUITests' do
+  target 'Curbside PickupUITests' do
     # Pods for testing
   end
 

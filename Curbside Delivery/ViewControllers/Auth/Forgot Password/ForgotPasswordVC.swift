@@ -46,24 +46,29 @@ class ForgotPasswordVC: BaseViewController {
     }
     
     func validation()->Bool{
-        var strTitle : String?
+//        var strEmailTitle : String?
+//        var strPhoneTitle : String?
         
         if(self.txtEmailOrPhone.text == ""){
-            Toast.show(title: StringConsts.Required, message: "Please enter email", state: .info)
+            Toast.show(title: StringConsts.Required, message: "Please enter email or phone", state: .info)
             return false
         }
         let checkEmail = self.txtEmailOrPhone.validatedText(validationType: .email)
-
-        if !checkEmail.0{
-            strTitle = checkEmail.1
-        }
+        let checkPhone = self.txtEmailOrPhone.validatedText(validationType: .phoneNo)
         
-        if let str = strTitle{
-            Toast.show(title: StringConsts.Required, message: str, state: .info)
+//        if !checkEmail.0{
+//            strEmailTitle = checkEmail.1
+//        }else if !checkPhone.0{
+//            strPhoneTitle = checkPhone.1
+//        }
+        
+        if checkEmail.0 || checkPhone.0 {
+            return true
+        } else {
+            Toast.show(title: StringConsts.Required, message: "Please enter valid email or phone", state: .info)
             return false
         }
-        
-        return true
+
     }
     
     //MARK: - UIButton action methods

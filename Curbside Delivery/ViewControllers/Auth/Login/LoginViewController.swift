@@ -44,7 +44,7 @@ class LoginViewController: BaseViewController {
         self.addNavBarImage(isLeft: true, isRight: true)
         self.setNavigationBarInViewController(controller: self, naviColor: colors.appOrangeColor.value, naviTitle: NavTitles.none.value, leftImage: NavItemsLeft.back.value, rightImages: [NavItemsRight.none.value], isTranslucent: true, isShowHomeTopBar: false)
         self.lblTitle.text = "Welcome Back"
-        self.txtEmail.placeholder = "Email Id"
+        self.txtEmail.placeholder = "Email / Phone Number"
         self.txtPassword.placeholder = "Password"
         self.btnForgotPassword.setTitle("Forgot Password", for: .normal)
         self.lblSignin.text = "Sign In"
@@ -55,24 +55,28 @@ class LoginViewController: BaseViewController {
         var strTitle : String?
         
         if(self.txtEmail.text == ""){
-            Toast.show(title: StringConsts.Required, message: "Please enter email", state: .info)
+            Toast.show(title: StringConsts.Required, message: "Please enter email or phone", state: .info)
             return false
         }
         let checkEmail = self.txtEmail.validatedText(validationType: .email)
+        let checkPhone = self.txtEmail.validatedText(validationType: .phoneNo)
         let password = self.txtPassword.validatedText(validationType: .password(field: self.txtPassword.placeholder?.lowercased() ?? ""))
         
-        if !checkEmail.0{
-            strTitle = checkEmail.1
-        }else if !password.0{
+        if !password.0{
             strTitle = password.1
         }
         
-        if let str = strTitle{
-            Toast.show(title: StringConsts.Required, message: str, state: .info)
-            return false
+        if (checkEmail.0 || checkPhone.0) && password.0 {
+            return true
+        } else {
+            if(strTitle == nil){
+                Toast.show(title: StringConsts.Required, message: "Please enter valid email or phone", state: .info)
+                return false
+            }else{
+                Toast.show(title: StringConsts.Required, message: strTitle ?? "", state: .info)
+                return false
+            }
         }
-        
-        return true
     }
     
     //MARK: - IBActions methods

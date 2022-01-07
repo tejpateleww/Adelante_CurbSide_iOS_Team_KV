@@ -146,7 +146,8 @@ struct PhoneNoValidator: ValidatorConvertible {
     func validated(_ value: String) -> (Bool,String) {
         guard value != "" else {return (false,ValidationError("Please enter contact number").message)}
 //        guard value.count >= 8 else { return (false,ValidationError("Please enter valid contact number").message)}
-        guard value.count <= 10 else { return (false,ValidationError("Please enter valid contact number").message)}
+        guard ((Int(value) != nil) == true) else { return (false,ValidationError("Please enter valid contact number").message)}
+        guard value.count == 10 else { return (false,ValidationError("Please enter valid contact number").message)}
         return (true, "")
     }
 }
