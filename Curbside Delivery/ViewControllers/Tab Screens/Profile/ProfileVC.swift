@@ -12,6 +12,7 @@ import Photos
 class ProfileVC: BaseViewController {
     
     // MARK: - IBOutlets
+    @IBOutlet weak var lblVersion: themeLabel!
     @IBOutlet weak var lblName: themeLabel!
     @IBOutlet weak var btnEditAccount: submitButton!
     @IBOutlet weak var txtEmail: floatTextField!
@@ -69,6 +70,8 @@ class ProfileVC: BaseViewController {
     }
     
     func setupData(){
+        let Version = "Version : \(Bundle.main.releaseVersionNumber ?? "")(\(Bundle.main.buildVersionNumber ?? ""))"
+        self.lblVersion.text = Version
         self.lblName.text = SingletonClass.sharedInstance.UserProfilData?.fullName ?? ""
         self.txtEmail.text = SingletonClass.sharedInstance.UserProfilData?.email ?? ""
         self.txtPhoneNumber.text =  SingletonClass.sharedInstance.UserProfilData?.phone ?? ""
@@ -95,6 +98,7 @@ class ProfileVC: BaseViewController {
         self.btnSave.isHidden = true
         self.iconProfile.isHidden = true
         self.btnEditAccount.isHidden = false
+        self.lblVersion.isHidden = false
     }
     
     func enableData(){
@@ -102,6 +106,7 @@ class ProfileVC: BaseViewController {
         self.btnSave.isHidden = false
         self.iconProfile.isHidden = false
         self.btnEditAccount.isHidden = true
+        self.lblVersion.isHidden = true
     }
     
     func UploadImage(){

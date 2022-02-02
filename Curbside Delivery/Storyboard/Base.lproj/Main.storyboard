@@ -450,6 +450,12 @@
                                                     <action selector="btnSaveAction:" destination="brr-pY-Azb" eventType="touchUpInside" id="sBX-ff-K5q"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version (1.0.0)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejz-8p-BX3" customClass="themeLabel" customModule="Curbside_Pickup" customModuleProvider="target">
+                                                <rect key="frame" x="153" y="680" width="108" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -470,11 +476,13 @@
                                             <constraint firstItem="MWD-Hu-uyO" firstAttribute="centerX" secondItem="PtJ-Wb-aKO" secondAttribute="centerX" id="V5d-ey-nuR"/>
                                             <constraint firstItem="jPQ-kt-HbU" firstAttribute="top" secondItem="MWD-Hu-uyO" secondAttribute="bottom" constant="20" id="VeF-39-9sF"/>
                                             <constraint firstItem="shg-gO-1dg" firstAttribute="top" secondItem="jPQ-kt-HbU" secondAttribute="bottom" constant="7.5" id="Vuw-AA-6Mv"/>
+                                            <constraint firstItem="ejz-8p-BX3" firstAttribute="centerX" secondItem="Xpf-ad-tTi" secondAttribute="centerX" id="WPV-Zy-bAT"/>
                                             <constraint firstItem="z8X-uz-3Vl" firstAttribute="bottom" secondItem="afg-C1-T97" secondAttribute="bottom" id="dS8-8d-cz9"/>
                                             <constraint firstItem="afg-C1-T97" firstAttribute="bottom" secondItem="MWD-Hu-uyO" secondAttribute="bottom" constant="-10" id="dpX-nw-ozL"/>
                                             <constraint firstItem="Xpf-ad-tTi" firstAttribute="leading" secondItem="PtJ-Wb-aKO" secondAttribute="leading" constant="30" id="n0a-MF-ybq"/>
                                             <constraint firstAttribute="bottom" secondItem="Xpf-ad-tTi" secondAttribute="bottom" constant="10" id="rdI-jT-tpE"/>
                                             <constraint firstItem="jPQ-kt-HbU" firstAttribute="centerX" secondItem="MWD-Hu-uyO" secondAttribute="centerX" id="tWJ-85-HlS"/>
+                                            <constraint firstItem="ejz-8p-BX3" firstAttribute="centerY" secondItem="Xpf-ad-tTi" secondAttribute="centerY" id="tXN-nd-Lyc"/>
                                             <constraint firstItem="MWD-Hu-uyO" firstAttribute="top" secondItem="PtJ-Wb-aKO" secondAttribute="top" constant="20" id="vpp-iC-Bjc"/>
                                         </constraints>
                                     </view>
@@ -506,6 +514,7 @@
                         <outlet property="iconProfile" destination="afg-C1-T97" id="sZT-jy-bcO"/>
                         <outlet property="imgProfile" destination="Uye-xD-yB8" id="1g8-qL-Fle"/>
                         <outlet property="lblName" destination="jPQ-kt-HbU" id="cZZ-WJ-tEH"/>
+                        <outlet property="lblVersion" destination="ejz-8p-BX3" id="z3F-aM-aPp"/>
                         <outlet property="txtEmail" destination="47B-le-Hhd" id="3E9-th-xPl"/>
                         <outlet property="txtPhoneNumber" destination="cU2-75-CwY" id="jo2-5i-L4y"/>
                         <outlet property="vWProfileImg" destination="MWD-Hu-uyO" id="5Cp-VV-n98"/>
@@ -1058,15 +1067,12 @@
     </scenes>
     <designables>
         <designable name="47B-le-Hhd">
-            <size key="intrinsicContentSize" width="374" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="50.5" height="18.5"/>
         </designable>
         <designable name="cU2-75-CwY">
-            <size key="intrinsicContentSize" width="374" height="39.220703125"/>
+            <size key="intrinsicContentSize" width="96.5" height="18.5"/>
         </designable>
         <designable name="kUL-tJ-ZkI"/>
-        <designable name="knC-wl-eUn">
-            <size key="intrinsicContentSize" width="195" height="32"/>
-        </designable>
     </designables>
     <resources>
         <image name="codeScanBackground" width="440.5" height="440.5"/>

@@ -70,7 +70,7 @@ enum NavTitles {
         case .CanceledOrderDetails:
             return "Canceled Order Details"
         case .OrderDetails:
-            return "Order Details"
+            return "Pending Order Details"
         case .ForgotPassword:
             return "Forgot Password"
             
