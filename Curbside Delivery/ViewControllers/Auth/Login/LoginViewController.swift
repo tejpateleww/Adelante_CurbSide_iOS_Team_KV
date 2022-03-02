@@ -46,7 +46,7 @@ class LoginViewController: BaseViewController {
         self.lblTitle.text = "Welcome Back"
         self.txtEmail.placeholder = "Email / Phone Number"
         self.txtPassword.placeholder = "Password"
-        self.btnForgotPassword.setTitle("Forgot Password", for: .normal)
+        self.btnForgotPassword.setTitle("Forgot Password?", for: .normal)
         self.lblSignin.text = "Sign In"
         self.txtEmail.autocorrectionType = .no
     }

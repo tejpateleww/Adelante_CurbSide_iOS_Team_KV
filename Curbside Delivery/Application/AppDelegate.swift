@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,UNUserNotificationCenterDe
     weak var customTabBarController: CustomTabBarVC?
     static var pushNotificationObj : NotificationObjectModel?
     static var pushNotificationType : String?
+    var orderId = ""
     
     var visibleViewController: UIViewController? {
         guard let rootViewController = window?.rootViewController else {

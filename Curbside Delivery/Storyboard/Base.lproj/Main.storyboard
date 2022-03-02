@@ -1067,10 +1067,10 @@
     </scenes>
     <designables>
         <designable name="47B-le-Hhd">
-            <size key="intrinsicContentSize" width="50.5" height="18.5"/>
+            <size key="intrinsicContentSize" width="374" height="39.220703125"/>
         </designable>
         <designable name="cU2-75-CwY">
-            <size key="intrinsicContentSize" width="96.5" height="18.5"/>
+            <size key="intrinsicContentSize" width="374" height="39.220703125"/>
         </designable>
         <designable name="kUL-tJ-ZkI"/>
     </designables>

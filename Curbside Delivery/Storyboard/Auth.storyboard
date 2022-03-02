@@ -29,7 +29,7 @@
         <!--Login View Controller-->
         <scene sceneID="lcD-hZ-bcz">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="CwO-q9-84O" customClass="LoginViewController" customModule="Curbside_Delivery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="CwO-q9-84O" customClass="LoginViewController" customModule="Curbside_Pickup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PNi-Fc-r4i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,7 +49,7 @@
                                                             <constraint firstAttribute="width" secondItem="sa9-Ur-L2l" secondAttribute="height" multiplier="127:125" id="3s7-EZ-nqh"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jkq-Em-NGC" customClass="themeTitleLabel" customModule="Curbside_Delivery" customModuleProvider="target">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jkq-Em-NGC" customClass="themeTitleLabel" customModule="Curbside_Pickup" customModuleProvider="target">
                                                         <rect key="frame" x="18" y="165" width="241" height="113"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="113" id="jHh-Io-ybj"/>
@@ -86,7 +86,7 @@ Back</string>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="WiC-b0-1az">
                                                                         <rect key="frame" x="0.0" y="0.0" width="378" height="63"/>
                                                                         <subviews>
-                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nvo-MH-fo1" customClass="floatTextField" customModule="Curbside_Delivery" customModuleProvider="target">
+                                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nvo-MH-fo1" customClass="floatTextField" customModule="Curbside_Pickup" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="378" height="47"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="height" constant="47" id="q2c-tb-goI"/>
@@ -103,7 +103,7 @@ Back</string>
                                                                                     <outlet property="delegate" destination="CwO-q9-84O" id="0rC-gX-rhE"/>
                                                                                 </connections>
                                                                             </textField>
-                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HYc-kB-vUq" customClass="seperatorView" customModule="Curbside_Delivery" customModuleProvider="target">
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HYc-kB-vUq" customClass="seperatorView" customModule="Curbside_Pickup" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="62" width="378" height="1"/>
                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <constraints>
@@ -130,7 +130,7 @@ Back</string>
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRo-Fl-jbf">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="378" height="47"/>
                                                                                 <subviews>
-                                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z5S-wx-3af" customClass="floatTextField" customModule="Curbside_Delivery" customModuleProvider="target">
+                                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="z5S-wx-3af" customClass="floatTextField" customModule="Curbside_Pickup" customModuleProvider="target">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="378" height="47"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="47" id="vLh-ZG-4Xx"/>
@@ -164,7 +164,7 @@ Back</string>
                                                                                     <constraint firstItem="z5S-wx-3af" firstAttribute="top" secondItem="rRo-Fl-jbf" secondAttribute="top" id="uJg-OA-zkg"/>
                                                                                 </constraints>
                                                                             </view>
-                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6eU-la-40D" customClass="seperatorView" customModule="Curbside_Delivery" customModuleProvider="target">
+                                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6eU-la-40D" customClass="seperatorView" customModule="Curbside_Pickup" customModuleProvider="target">
                                                                                 <rect key="frame" x="0.0" y="62" width="378" height="1"/>
                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                                 <constraints>
@@ -184,13 +184,13 @@ Back</string>
                                                             </view>
                                                         </subviews>
                                                     </stackView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bYf-5i-AJY" customClass="submitButton" customModule="Curbside_Delivery" customModuleProvider="target">
-                                                        <rect key="frame" x="305" y="169.5" width="91" height="58.5"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bYf-5i-AJY" customClass="submitButton" customModule="Curbside_Pickup" customModuleProvider="target">
+                                                        <rect key="frame" x="298" y="169.5" width="98" height="58.5"/>
                                                         <state key="normal">
                                                             <attributedString key="attributedTitle">
-                                                                <fragment content="Forgot Password">
+                                                                <fragment content="Forgot Password?">
                                                                     <attributes>
-                                                                        <color key="NSColor" red="0.58431372549019611" green="0.59215686274509804" blue="0.6588235294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                         <font key="NSFont" size="12" name="Helvetica"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
                                                                             <tabStops>
@@ -252,7 +252,7 @@ Back</string>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OS8-7U-3T9">
                                                         <rect key="frame" x="18" y="253" width="378" height="63"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTz-8p-SWB" customClass="themeLabel" customModule="Curbside_Delivery" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTz-8p-SWB" customClass="themeLabel" customModule="Curbside_Pickup" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="14" width="52" height="35"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="35" id="0c2-xE-uuD"/>
@@ -356,7 +356,7 @@ Back</string>
         <!--SplashVC-->
         <scene sceneID="ehV-mm-uZj">
             <objects>
-                <viewController storyboardIdentifier="SplashVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HuX-Lc-tzQ" customClass="SplashVC" customModule="Curbside_Delivery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SplashVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HuX-Lc-tzQ" customClass="SplashVC" customModule="Curbside_Pickup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PCu-eg-NRe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -433,7 +433,7 @@ Back</string>
         <!--Forgot PasswordVC-->
         <scene sceneID="dAw-gj-sYJ">
             <objects>
-                <viewController storyboardIdentifier="ForgotPasswordVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5IG-gh-quG" customClass="ForgotPasswordVC" customModule="Curbside_Delivery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ForgotPasswordVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5IG-gh-quG" customClass="ForgotPasswordVC" customModule="Curbside_Pickup" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Sc-Tu-vR0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -457,7 +457,7 @@ Back</string>
                                                                     <constraint firstAttribute="height" constant="155" id="LaI-dm-kwu"/>
                                                                 </constraints>
                                                             </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1Q-eN-bKH" customClass="themeLabel" customModule="Curbside_Delivery" customModuleProvider="target">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1Q-eN-bKH" customClass="themeLabel" customModule="Curbside_Pickup" customModuleProvider="target">
                                                                 <rect key="frame" x="143" y="241" width="128" height="35"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="35" id="46I-XX-igC"/>
@@ -482,7 +482,7 @@ Back</string>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="7S9-Pb-QHi">
                                                         <rect key="frame" x="18" y="331" width="378" height="63"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email / Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NxS-3h-Lbw" customClass="floatTextField" customModule="Curbside_Delivery" customModuleProvider="target">
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email / Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NxS-3h-Lbw" customClass="floatTextField" customModule="Curbside_Pickup" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="0.0" width="378" height="47"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="47" id="Yzf-K7-xfc"/>
@@ -493,7 +493,7 @@ Back</string>
                                                                     <outlet property="delegate" destination="5IG-gh-quG" id="eAI-WK-Fhb"/>
                                                                 </connections>
                                                             </textField>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6U1-OR-JQe" customClass="seperatorView" customModule="Curbside_Delivery" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6U1-OR-JQe" customClass="seperatorView" customModule="Curbside_Pickup" customModuleProvider="target">
                                                                 <rect key="frame" x="0.0" y="62" width="378" height="1"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
@@ -502,7 +502,7 @@ Back</string>
                                                             </view>
                                                         </subviews>
                                                     </stackView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4a-gd-q3Q" customClass="submitButton" customModule="Curbside_Delivery" customModuleProvider="target">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4a-gd-q3Q" customClass="submitButton" customModule="Curbside_Pickup" customModuleProvider="target">
                                                         <rect key="frame" x="32" y="431" width="350" height="47"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="47" id="qBe-TJ-BPn"/>
@@ -574,17 +574,6 @@ Back</string>
             <point key="canvasLocation" x="2233" y="110"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="NxS-3h-Lbw">
-            <size key="intrinsicContentSize" width="378" height="39.220703125"/>
-        </designable>
-        <designable name="nvo-MH-fo1">
-            <size key="intrinsicContentSize" width="378" height="39.220703125"/>
-        </designable>
-        <designable name="z5S-wx-3af">
-            <size key="intrinsicContentSize" width="378" height="39.220703125"/>
-        </designable>
-    </designables>
     <resources>
         <image name="adelanteLogo" width="127" height="125"/>
         <image name="iconLaunch_Bottom" width="274.5" height="291.5"/>

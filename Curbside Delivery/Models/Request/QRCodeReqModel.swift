@@ -9,9 +9,11 @@ import Foundation
 
 class QRCodeReqModel: Encodable{
     var qrCode : String?
+    var orderId : String?
     
     enum CodingKeys: String, CodingKey {
         case qrCode = "qr_code"
+        case orderId = "order_id"
     }
 }
 

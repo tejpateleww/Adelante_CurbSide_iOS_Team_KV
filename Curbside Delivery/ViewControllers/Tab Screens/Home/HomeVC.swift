@@ -238,6 +238,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(self.arrorders.count > 0){ // to avoid no data found cell tap
             if(self.selectedSegmentTag == 0){
+                AppDelegate.current.orderId = self.arrorders[indexPath.row].id ?? ""
                 self.customTabBarController?.selectedIndex = 1
             }else{
                 if(self.arrorders[indexPath.row].status == "5"){

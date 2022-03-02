@@ -14,11 +14,15 @@ class ScanQRUserModel{
         Utilities.showHud()
         WebServiceSubClass.ScanQRCodeApi(reqModel: reqModel) { (status, apiMessage, response, error) in
             Utilities.hideHud()
+            AppDelegate.current.orderId = ""
             if status{
                 self.scanVC?.orderDict = response
                 self.scanVC?.goToOrderDetail()
             }else{
-                Toast.show(title: StringConsts.Error, message: apiMessage, state: .failure)
+                self.scanVC?.customTabBarController?.selectedIndex = 0
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    Toast.show(title: StringConsts.Error, message: apiMessage, state: .failure)
+                }
             }
         }
     }

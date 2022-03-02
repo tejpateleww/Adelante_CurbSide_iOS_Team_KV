@@ -138,6 +138,7 @@ extension ScanQRcodeVC{
         
         let reqModel = QRCodeReqModel()
         reqModel.qrCode = strQRCode
+        reqModel.orderId = AppDelegate.current.orderId
         
         self.scanQRUserModel.webserviceLScanQR(reqModel: reqModel)
     }
