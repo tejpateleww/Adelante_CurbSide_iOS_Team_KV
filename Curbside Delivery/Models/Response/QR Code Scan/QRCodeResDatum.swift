@@ -22,6 +22,7 @@ class QRCodeResDatum : Codable {
     let restaurantId : String?
     let restaurantName : String?
     let serviceFee : String?
+    let restaurentServiceFee : String?
     let shareOrderId : String?
     let street : String?
     let subTotal : String?
@@ -50,6 +51,7 @@ class QRCodeResDatum : Codable {
         case restaurantId = "restaurant_id"
         case restaurantName = "restaurant_name"
         case serviceFee = "service_fee"
+        case restaurentServiceFee = "restaurant_service_fee"
         case shareOrderId = "share_order_id"
         case street = "street"
         case subTotal = "sub_total"
@@ -80,6 +82,7 @@ class QRCodeResDatum : Codable {
         restaurantId = try values.decodeIfPresent(String.self, forKey: .restaurantId)
         restaurantName = try values.decodeIfPresent(String.self, forKey: .restaurantName)
         serviceFee = try values.decodeIfPresent(String.self, forKey: .serviceFee)
+        restaurentServiceFee = try values.decodeIfPresent(String.self, forKey: .restaurentServiceFee)
         shareOrderId = try values.decodeIfPresent(String.self, forKey: .shareOrderId)
         street = try values.decodeIfPresent(String.self, forKey: .street)
         subTotal = try values.decodeIfPresent(String.self, forKey: .subTotal)

@@ -190,7 +190,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource{
                     cell.lblName.text = self.arrorders[indexPath.row].username ?? ""
                     cell.lblOrderId.text = "Order Id : \(self.arrorders[indexPath.row].id ?? "")"
                     cell.lblOrderAmount.text = "\( CurrencySymbol)\(self.arrorders[indexPath.row].total ?? "")"
-                    cell.lblCarNumber.text = self.arrorders[indexPath.row].carNumber ?? ""
+                    cell.lblCarNumber.text = (self.arrorders[indexPath.row].carNumber == "") ? "-" : self.arrorders[indexPath.row].carNumber
                     cell.lblParkingNumber.text = self.arrorders[indexPath.row].parkingNo ?? ""
                     
                     return cell
@@ -201,7 +201,7 @@ extension HomeVC : UITableViewDelegate, UITableViewDataSource{
                     cell.lblName.text = self.arrorders[indexPath.row].username ?? ""
                     cell.lblOrderId.text = "Order Id : \(self.arrorders[indexPath.row].id ?? "")"
                     cell.lblOrderAmount.text = "\(CurrencySymbol)\(self.arrorders[indexPath.row].total ?? "")"
-                    cell.lblCarNumber.text = self.arrorders[indexPath.row].carNumber ?? ""
+                    cell.lblCarNumber.text = (self.arrorders[indexPath.row].carNumber == "") ? "-" : self.arrorders[indexPath.row].carNumber
                     cell.lblParkingNumber.text = self.arrorders[indexPath.row].parkingNo ?? ""
                     
                     if(self.arrorders[indexPath.row].status == "5"){

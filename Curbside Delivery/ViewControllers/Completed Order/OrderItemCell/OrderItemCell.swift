@@ -14,6 +14,8 @@ class OrderItemCell: UITableViewCell {
     @IBOutlet weak var lblItemQty: UILabel!
     @IBOutlet weak var lblItemPrice: UILabel!
     @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var lblDescription: UILabel!
+    @IBOutlet weak var vWBottom: UIView!
     
     //MARK: - Life-Cycle methods
     override func awakeFromNib() {
@@ -32,6 +34,7 @@ class OrderItemCell: UITableViewCell {
         self.lblItemName.font = FontBook.bold.font(ofSize: 14)
         self.lblItemQty.font = FontBook.bold.font(ofSize: 14)
         self.lblItemPrice.font = FontBook.bold.font(ofSize: 14)
+        self.lblDescription.font = FontBook.regular.font(ofSize: 12)
         self.lblDate.font = FontBook.regular.font(ofSize: 12)
     }
     

@@ -21,6 +21,7 @@ class OrderDetailVC: BaseViewController {
     @IBOutlet weak var lblSubTotal: UILabel!
     @IBOutlet weak var lblServiceFee: UILabel!
     @IBOutlet weak var lblTax: UILabel!
+    @IBOutlet weak var lblPromocodeAmount: UILabel!
     
     @IBOutlet weak var lblCompleted: UILabel!
     @IBOutlet weak var lblCanceled: UILabel!
@@ -34,6 +35,7 @@ class OrderDetailVC: BaseViewController {
     @IBOutlet weak var lblTitleSubTotal: UILabel!
     @IBOutlet weak var lblTitleServiceFee: UILabel!
     @IBOutlet weak var lblTitleTax: UILabel!
+    @IBOutlet weak var lblTitlePromocodeTax: UILabel!
     
     @IBOutlet weak var lblTitleParkingNumber: UILabel!
     @IBOutlet weak var lblTitleCarNumber: UILabel!
@@ -46,6 +48,9 @@ class OrderDetailVC: BaseViewController {
     
     @IBOutlet weak var stackParking: UIStackView!
     @IBOutlet weak var stackCar: UIStackView!
+    
+    @IBOutlet weak var vePromocodeHeight: NSLayoutConstraint!
+    @IBOutlet weak var vWPromocode: UIView!
     
     
     var customTabBarController: CustomTabBarVC?
@@ -134,10 +139,12 @@ class OrderDetailVC: BaseViewController {
         self.lblTitlePriceItem.font = FontBook.bold.font(ofSize: 18)
         self.lblTitleYourOrder.font = FontBook.bold.font(ofSize: 22)
         self.lblTitleSubTotal.font = FontBook.regular.font(ofSize: 16)
+        self.lblTitlePromocodeTax.font = FontBook.regular.font(ofSize: 16)
         self.lblTitleServiceFee.font = FontBook.regular.font(ofSize: 16)
         self.lblTitleTax.font = FontBook.regular.font(ofSize: 16)
         self.lblSubTotal.font = FontBook.bold.font(ofSize: 16)
         self.lblServiceFee.font = FontBook.bold.font(ofSize: 16)
+        self.lblPromocodeAmount.font = FontBook.bold.font(ofSize: 16)
         self.lblTax.font = FontBook.bold.font(ofSize: 16)
         
         
@@ -154,11 +161,13 @@ class OrderDetailVC: BaseViewController {
     func setupData(){
         self.lblName.text = self.orderDetail?.username ?? ""
         self.lblParkingNumber.text = self.orderDetail?.parkingno ?? "-"
-        self.lblCarNumber.text = self.orderDetail?.carnumber ?? "-"
+        self.lblCarNumber.text = (self.orderDetail?.carnumber == "") ? "-" : self.orderDetail?.carnumber
         self.lblOrderID.text = "Order Id : \(self.orderDetail?.orderId ?? "")"
-        self.lblTotalItems.text = "\(self.orderDetail?.item?.count ?? 0) Items"
+        self.lblTotalItems.text = "\(self.orderDetail?.item?.count ?? 0) Food Items"
         self.lblTotal.text = "\(CurrencySymbol)\(self.orderDetail?.total ?? "")"
         self.lblSubTotal.text = "\(CurrencySymbol)\(self.orderDetail?.subTotal ?? "")"
+        
+        self.lblTitleServiceFee.text = "Service Fee (\(self.orderDetail?.restaurentServiceFee ?? "")%)"
         self.lblServiceFee.text = "\(CurrencySymbol)\(self.orderDetail?.serviceFee ?? "")"
         self.lblTax.text = "\(CurrencySymbol)\(self.orderDetail?.tax ?? "")"
         
@@ -167,6 +176,18 @@ class OrderDetailVC: BaseViewController {
         
         if(self.lblCarNumber.text == "-"){
             self.stackCar.isHidden = true
+        }
+        
+        if(self.orderDetail?.promocode ?? "" != ""){
+            self.vWPromocode.isHidden = false
+            self.lblPromocodeAmount.text = "-\(CurrencySymbol)\(self.orderDetail?.discountAmount ?? "")"
+            self.lblTitlePromocodeTax.text = "Promocode (\(self.orderDetail?.promocode ?? ""))"
+            self.vePromocodeHeight.constant = 50
+            self.view.updateFocusIfNeeded()
+        }else{
+            self.vWPromocode.isHidden = true
+            self.vePromocodeHeight.constant = 0
+            self.view.updateFocusIfNeeded()
         }
     }
     
@@ -208,6 +229,14 @@ extension OrderDetailVC : UITableViewDelegate, UITableViewDataSource{
         cell.lblItemQty.text = self.arrItem[indexPath.row].quantity ?? ""
         cell.lblDate.text = self.arrItem[indexPath.row].date ?? ""
         cell.lblItemPrice.text = "\(CurrencySymbol)\(self.arrItem[indexPath.row].price ?? "")"
+        cell.lblDescription.text = self.arrItem[indexPath.row].description ?? ""
+        
+        if(indexPath.row == self.arrItem.count - 1){
+            cell.vWBottom.isHidden = true
+        }else{
+            cell.vWBottom.isHidden = false
+        }
+        
         return cell
         
     }
