@@ -94,7 +94,20 @@ class BaseViewController: UIViewController {
                 let btnLeftBar : UIBarButtonItem = UIBarButtonItem.init(customView: LeftView)
                 btnLeftBar.style = .plain
                 controller.navigationItem.leftBarButtonItem = btnLeftBar
+            }else if leftImage == NavItemsLeft.editBack.value {
+                let btnLeft = UIButton(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+                btnLeft.setImage(UIImage.init(named: "nav_back"), for: .normal)
+                btnLeft.layer.setValue(controller, forKey: "controller")
+                btnLeft.addTarget(self, action: #selector(self.btnBackEditAction), for: .touchUpInside)
+                let LeftView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+                LeftView.addSubview(btnLeft)
+                
+                let btnLeftBar : UIBarButtonItem = UIBarButtonItem.init(customView: LeftView)
+                btnLeftBar.style = .plain
+                controller.navigationItem.leftBarButtonItem = btnLeftBar
             }
+        }else{
+            controller.navigationItem.leftBarButtonItem = nil
         }
         if rightImages.count != 0 {
             var arrButtons = [UIBarButtonItem]()
@@ -165,6 +178,10 @@ class BaseViewController: UIViewController {
     
     @objc func btnBackAction() {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func btnBackEditAction() {
+        NotificationCenter.default.post(name: .ProfileBackAction, object: nil)
     }
     
     @objc func btnLogoutAction() {

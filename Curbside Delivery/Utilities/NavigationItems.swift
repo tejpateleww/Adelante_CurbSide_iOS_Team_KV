@@ -11,7 +11,7 @@ import Foundation
 import UIKit
 
 enum NavItemsLeft {
-    case none, back ,skip
+    case none, back ,skip, editBack
     
     var value:String {
         switch self {
@@ -19,6 +19,8 @@ enum NavItemsLeft {
             return ""
         case .back:
             return "back"
+        case .editBack:
+            return "editBack"
         case .skip:
             return "NavigationTitles_NavItemsLeft_skip".Localized()
         }

@@ -42,6 +42,7 @@ class ProfileVC: BaseViewController {
     func prepareView(){
         self.setupUI()
         self.setupData()
+        self.addNotificationObs()
         self.disableData()
         self.callGetUserProfile()
     }
@@ -81,6 +82,16 @@ class ProfileVC: BaseViewController {
         self.imgProfile.sd_setImage(with: URL(string: ProfileURL), placeholderImage: UIImage(named: "imgProfile"), options: .refreshCached, completed: nil)
     }
     
+    //MARK: - Custom methods
+    func addNotificationObs(){
+        NotificationCenter.default.removeObserver(self, name: .ProfileBackAction, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.ProfileBackAction), name: .ProfileBackAction, object: nil)
+    }
+    
+    @objc func ProfileBackAction() {
+        self.disableData()
+    }
+    
     func setupDataFromRes(UserInfo : EditUserResProfile){
         self.lblName.text =  UserInfo.fullName ?? SingletonClass.sharedInstance.UserProfilData?.fullName ?? ""
         self.txtEmail.text = UserInfo.email ?? SingletonClass.sharedInstance.UserProfilData?.email ?? ""
@@ -102,7 +113,7 @@ class ProfileVC: BaseViewController {
     }
     
     func enableData(){
-        self.setNavigationBarInViewController(controller: self, naviColor: colors.appOrangeColor.value, naviTitle: NavTitles.editProfile.value, leftImage: NavItemsLeft.none.value, rightImages: [NavItemsRight.logout.value], isTranslucent: true, isShowHomeTopBar: false)
+        self.setNavigationBarInViewController(controller: self, naviColor: colors.appOrangeColor.value, naviTitle: NavTitles.editProfile.value, leftImage: NavItemsLeft.editBack.value, rightImages: [NavItemsRight.logout.value], isTranslucent: true, isShowHomeTopBar: false)
         self.btnSave.isHidden = false
         self.iconProfile.isHidden = false
         self.btnEditAccount.isHidden = true

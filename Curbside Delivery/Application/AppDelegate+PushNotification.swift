@@ -133,6 +133,7 @@ extension Notification.Name {
     static let sessionExpire = NSNotification.Name("sessionExpire")
     static let callInit = NSNotification.Name("callInit")
     static let orderPrepare = NSNotification.Name("orderPrepare")
+    static let ProfileBackAction = NSNotification.Name("ProfileBackAction")
 }
 
 enum NotificationTypes : String {
