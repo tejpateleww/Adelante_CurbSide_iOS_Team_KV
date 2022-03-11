@@ -168,8 +168,9 @@ class OrderDetailVC: BaseViewController {
         self.lblSubTotal.text = "\(CurrencySymbol)\(self.orderDetail?.subTotal ?? "")"
         
         self.lblTitleServiceFee.text = "Service Fee (\(self.orderDetail?.restaurentServiceFee ?? "")%)"
+        self.lblTitleTax.text = "Taxes (\(self.orderDetail?.tax ?? "")%)"
         self.lblServiceFee.text = "\(CurrencySymbol)\(self.orderDetail?.serviceFee ?? "")"
-        self.lblTax.text = "\(CurrencySymbol)\(self.orderDetail?.tax ?? "")"
+        self.lblTax.text = "\(CurrencySymbol)\(self.orderDetail?.totalRound ?? "")"
         
         self.arrItem = self.orderDetail?.item ?? []
         self.tblItems.reloadData()
@@ -228,7 +229,7 @@ extension OrderDetailVC : UITableViewDelegate, UITableViewDataSource{
         cell.lblItemName.text = self.arrItem[indexPath.row].restaurantItemName ?? ""
         cell.lblItemQty.text = self.arrItem[indexPath.row].quantity ?? ""
         cell.lblDate.text = self.arrItem[indexPath.row].date ?? ""
-        cell.lblItemPrice.text = "\(CurrencySymbol)\(self.arrItem[indexPath.row].price ?? "")"
+        cell.lblItemPrice.text = "\(CurrencySymbol)\(self.arrItem[indexPath.row].subTotal ?? "")"
         cell.lblDescription.text = self.arrItem[indexPath.row].description ?? ""
         
         if(indexPath.row == self.arrItem.count - 1){

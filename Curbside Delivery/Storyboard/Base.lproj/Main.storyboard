@@ -844,7 +844,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SubTotal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9b5-Rv-XQx">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtotal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9b5-Rv-XQx">
                                                 <rect key="frame" x="20" y="544.5" width="182" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -1111,16 +1111,7 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="47B-le-Hhd">
-            <size key="intrinsicContentSize" width="374" height="39.220703125"/>
-        </designable>
-        <designable name="cU2-75-CwY">
-            <size key="intrinsicContentSize" width="374" height="39.220703125"/>
-        </designable>
         <designable name="kUL-tJ-ZkI"/>
-        <designable name="knC-wl-eUn">
-            <size key="intrinsicContentSize" width="195" height="32"/>
-        </designable>
     </designables>
     <resources>
         <image name="codeScanBackground" width="440.5" height="440.5"/>

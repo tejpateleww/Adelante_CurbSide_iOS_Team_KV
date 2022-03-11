@@ -32,7 +32,7 @@ class ForgotPasswordVC: BaseViewController {
     
     func setupUI(){
         self.addNavBarImage(isLeft: true, isRight: true)
-        self.setNavigationBarInViewController(controller: self, naviColor: colors.appOrangeColor.value, naviTitle: NavTitles.ForgotPassword.value, leftImage: NavItemsLeft.back.value, rightImages: [NavItemsRight.none.value], isTranslucent: true, isShowHomeTopBar: false)
+        self.setNavigationBarInViewController(controller: self, naviColor: colors.appOrangeColor.value, naviTitle: NavTitles.none.value, leftImage: NavItemsLeft.back.value, rightImages: [NavItemsRight.none.value], isTranslucent: true, isShowHomeTopBar: false)
         
         self.lblForgotPassword.font = FontBook.bold.font(ofSize: 26)
     }

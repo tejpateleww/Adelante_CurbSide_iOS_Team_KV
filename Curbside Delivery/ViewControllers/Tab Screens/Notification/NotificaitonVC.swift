@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class NotificaitonVC: BaseViewController {
     
@@ -117,11 +118,15 @@ extension NotificaitonVC : UITableViewDelegate, UITableViewDataSource{
                 cell.lblNotiTitle.text = self.arrNotification[indexPath.row].notificationTitle ?? ""
                 cell.lblNotiDesc.text = self.arrNotification[indexPath.row].descriptionField ?? ""
                 
-                if(cell.lblNotiDesc.text == StringConsts.NotiSessionExpired){
-                    cell.imgNoti.image = UIImage(named: "iconNotificationInfo")
-                }else{
-                    cell.imgNoti.image = UIImage(named: "iconNotiSuccess")
-                }
+                let ProfileURL = "\(APIEnvironment.ProfileBasrURL.rawValue)\( self.arrNotification[indexPath.row].image ?? "")"
+                cell.imgNoti.sd_setImage(with: URL(string: ProfileURL), placeholderImage: UIImage(named: ""), options: .refreshCached, completed: nil)
+                
+                
+//                if(cell.lblNotiDesc.text == StringConsts.NotiSessionExpired){
+//                    cell.imgNoti.image = UIImage(named: "iconNotificationInfo")
+//                }else{
+//                    cell.imgNoti.image = UIImage(named: "iconNotiSuccess")
+//                }
                 return cell
             }else{
                 let NoDatacell = self.tblNotification.dequeueReusableCell(withIdentifier: "NoDataTableViewCell", for: indexPath) as! NoDataTableViewCell
